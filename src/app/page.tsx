@@ -17,7 +17,7 @@ export default function Home() {
       {/* Main Content Area */}
       <main className="flex-grow">
         {/* Hero Section */}
-        <section 
+        <section
           className="relative h-[100dvh] md:h-auto md:min-h-[700px] lg:min-h-screen flex items-center overflow-hidden bg-[#FAF8F5] pt-20"
           aria-label="Welcome to Loran's"
         >
@@ -34,7 +34,7 @@ export default function Home() {
           </div>
 
           {/* White shadow (cream overlay) smooth gradient - no middle border, lets background peek through on the left */}
-          <div 
+          <div
             className="absolute inset-0 z-10 bg-gradient-to-b from-[#FAF8F5]/90 via-[#FAF8F5]/75 to-[#FAF8F5]/90 md:bg-gradient-to-r md:from-[#FAF8F5]/92 md:via-[#FAF8F5]/78 md:via-42% md:to-transparent"
             aria-hidden="true"
           />
@@ -46,7 +46,7 @@ export default function Home() {
               <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] font-medium text-amber-800 uppercase mb-3">
                 Premium Grooming for Men
               </span>
-              
+
               {/* Brand Title */}
               <h1 className="sr-only">Loran&apos;s</h1>
               <div className="relative w-[190px] h-[48px] sm:w-[285px] sm:h-[72px] lg:w-[380px] lg:h-[96px] mb-4">
@@ -61,7 +61,7 @@ export default function Home() {
 
               {/* Sub-Title */}
               <h2 className="font-serif text-base sm:text-xl tracking-[0.2em] font-medium text-amber-700 uppercase mt-1 mb-6 sm:mb-8">
-                Hair Cutting Saloon
+                Gents Beauty Parlour
               </h2>
 
               {/* Tagline Divider Block */}
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
 
           {/* Scroll Down Indicator */}
-          <div 
+          <div
             className="absolute bottom-8 left-6 lg:left-12 z-20 hidden sm:flex items-center gap-3 text-stone-500"
             aria-hidden="true"
           >

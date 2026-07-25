@@ -65,9 +65,9 @@ export default function Preloader() {
       <div className="flex flex-col items-center max-w-sm px-6 animate-preloader-fade opacity-0">
         
         {/* Brand Gold Logo */}
-        <div className="relative w-[180px] h-[45px] mb-4 select-none">
+        <div className="relative w-[260px] h-[65px] mb-4 select-none">
           <Image
-            src="/assets/lorans_logo_gold.png"
+            src="/assets/logo.png"
             alt="Loran's"
             fill
             className="object-contain"
@@ -77,7 +77,7 @@ export default function Preloader() {
 
         {/* Subtitle */}
         <span className="font-sans text-[8px] tracking-[0.3em] font-semibold text-stone-500 uppercase leading-none block mb-6">
-          Hair Cutting Saloon
+          Loran&apos;s Gents
         </span>
 
         {/* Delicate loading bar */}
