@@ -63,8 +63,8 @@ export default function GalleryPage() {
           </p>
         </div>
 
-        {/* Expanded Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+        {/* Expanded Gallery Grid - Always 3 columns */}
+        <div className="grid grid-cols-3 gap-2 sm:gap-6 mt-8">
           {galleryItems.map((item) => (
             <div 
               key={item.id}
@@ -74,20 +74,20 @@ export default function GalleryPage() {
                 src={item.src}
                 alt={item.alt}
                 fill
-                sizes="(max-w-768px) 50vw, (max-w-1024px) 33vw, 25vw"
+                sizes="33vw"
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
               />
               
               {/* Luxury dark hover details */}
               <div 
-                className="absolute inset-0 bg-stone-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4"
+                className="absolute inset-0 bg-stone-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 sm:p-4"
                 aria-hidden="true"
               >
-                <div className="text-center space-y-2">
-                  <span className="font-sans text-[10px] tracking-[0.2em] uppercase text-[#c59842] font-semibold block">
+                <div className="text-center space-y-1 sm:space-y-2">
+                  <span className="font-sans text-[8px] sm:text-[10px] tracking-[0.2em] uppercase text-[#c59842] font-semibold block">
                     Portfolio
                   </span>
-                  <span className="font-sans text-xs sm:text-sm tracking-wider uppercase text-white font-medium block border-t border-white/20 pt-2 px-4">
+                  <span className="font-sans text-[10px] sm:text-xs md:text-sm tracking-wider uppercase text-white font-medium block border-t border-white/20 pt-1.5 sm:pt-2 px-2 sm:px-4">
                     {item.category}
                   </span>
                 </div>

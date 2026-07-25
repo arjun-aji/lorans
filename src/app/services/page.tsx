@@ -115,22 +115,22 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        {/* Detailed Services Listing as a 3-column Grid on Desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Detailed Services Listing as a 2-column Grid on Mobile, 3-column on Desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="flex flex-col justify-between p-6 bg-white border border-stone-200/50 rounded-sm shadow-md hover:shadow-lg transition-shadow duration-300 min-h-[270px]"
+              className="flex flex-col justify-between p-4 sm:p-6 bg-white border border-stone-200/50 rounded-sm shadow-md hover:shadow-lg transition-shadow duration-300 min-h-[220px] sm:min-h-[270px]"
             >
               <div>
-                <div className="flex-shrink-0 text-[#c59842] bg-[#FAF8F5] p-3 rounded-sm border border-stone-100 shadow-sm w-fit mb-4" aria-hidden="true">
+                <div className="flex-shrink-0 text-[#c59842] bg-[#FAF8F5] p-2.5 sm:p-3 rounded-sm border border-stone-100 shadow-sm w-fit mb-3 sm:mb-4" aria-hidden="true">
                   {service.icon}
                 </div>
-                <div className="space-y-2 mb-6">
-                  <h2 className="font-sans font-bold text-base tracking-wider text-stone-900 uppercase">
+                <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
+                  <h2 className="font-sans font-bold text-xs sm:text-sm md:text-base tracking-wider text-stone-900 uppercase">
                     {service.title}
                   </h2>
-                  <p className="font-sans text-stone-600 font-light text-xs leading-relaxed">
+                  <p className="font-sans text-stone-600 font-light text-[10px] sm:text-xs leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -142,7 +142,7 @@ export default function ServicesPage() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs tracking-[0.2em] font-bold uppercase text-[#c59842] hover:text-[#b58832] transition-colors group/link focus-visible:outline-none mt-auto"
+                className="inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] font-bold uppercase text-[#c59842] hover:text-[#b58832] transition-colors group/link focus-visible:outline-none mt-auto"
               >
                 <span>Book Now</span>
                 <svg 
