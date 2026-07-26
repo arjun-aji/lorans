@@ -13,7 +13,7 @@ export default function Header() {
 
       {/* ─── MOBILE NAVBAR (< md) ────────────────────────────────────────────── */}
       {/* Three-zone: [Hamburger] [Logo centered] [Spacer] */}
-      <div className="md:hidden w-full px-5 h-16 flex items-center justify-between relative">
+      <div className="md:hidden w-full px-5 h-16 flex items-center justify-between relative border-b border-[#ECE7DF]" style={{ background: 'rgba(250,248,245,0.75)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}>
 
         {/* LEFT — Hamburger (44×44 touch target) */}
         <button
@@ -45,19 +45,28 @@ export default function Header() {
           className="focus-visible:outline-none block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           aria-label="Loran's Home"
         >
-          <div className="relative w-[170px] h-[44px]">
+          <div className="relative w-[120px] sm:w-[160px] h-[36px] sm:h-[42px]">
             <Image
               src="/assets/logo.png"
               alt="Loran's"
               fill
-              sizes="170px"
+              sizes="160px"
               className="object-contain"
             />
           </div>
         </a>
 
-        {/* RIGHT — Mirror spacer (same width as hamburger for optical balance) */}
-        <div className="w-11 h-11 flex-shrink-0" aria-hidden="true" />
+        {/* RIGHT — Book Appointment Button */}
+        <a
+          href={`https://wa.me/917356568307?text=${encodeURIComponent(
+            'Please enter the details...\nName:\nDate:\nService: '
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center px-2.5 sm:px-3 py-2 bg-[#c59842] hover:bg-[#b58832] text-[9px] sm:text-[10px] font-bold tracking-[0.12em] uppercase text-white transition-all duration-300 rounded shadow-sm relative z-50 flex-shrink-0"
+        >
+          Book Appointment
+        </a>
       </div>
 
       {/* ─── DESKTOP NAVBAR (≥ md) — UNCHANGED ───────────────────────────────── */}
