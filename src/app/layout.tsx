@@ -73,6 +73,8 @@ export const metadata: Metadata = {
   },
 };
 
+import QueryProvider from "@/providers/QueryProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -84,7 +86,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${inter.variable} ${pinyon.variable} h-full antialiasedScroll`}
     >
       <body className="min-h-full flex flex-col font-sans bg-stone-50 text-stone-900 selection:bg-amber-100 selection:text-amber-900">
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );

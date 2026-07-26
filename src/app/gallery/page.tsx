@@ -1,106 +1,59 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Gallery from '@/components/gallery/Gallery';
+import { ArrowLeft } from 'lucide-react';
 
 export default function GalleryPage() {
-  const galleryItems = [
-    { id: 1, src: '/assets/fade_haircut.png', category: 'Mid Fade', alt: 'Modern skin fade haircut side view' },
-    { id: 2, src: '/assets/beard_grooming.png', category: 'Beard Grooming', alt: 'Precision beard trim and line shaping' },
-    { id: 3, src: '/assets/facial_mask.png', category: 'Facial Care', alt: 'Skincare facial clay treatment at spa' },
-    { id: 4, src: '/assets/hero.jpeg', category: 'Haircut', alt: 'Classic gentlemen haircut styling' },
-    { id: 5, src: '/assets/fade_haircut.png', category: 'Texture Fade', alt: 'Textured hair styling with mid fade' },
-    { id: 6, src: '/assets/beard_grooming.png', category: 'Beard Styling', alt: 'Detailed mustache styling and beard care' },
-    { id: 7, src: '/assets/facial_mask.png', category: 'Spa Massage', alt: 'Soothing face massage and therapy' },
-    { id: 8, src: '/assets/hero.jpeg', category: 'Styling Finish', alt: 'Gentlemen hair styling finish' },
-    { id: 9, src: '/assets/fade_haircut.png', category: 'Zero Fade', alt: 'Clean zero fade haircut' },
-    { id: 10, src: '/assets/beard_grooming.png', category: 'Full Beard Trim', alt: 'Full beard grooming service' },
-    { id: 11, src: '/assets/facial_mask.png', category: 'Premium Skincare', alt: 'Premium facial treatment for men' },
-    { id: 12, src: '/assets/about_interior.png', category: 'Saloon Vibe', alt: 'Loran styling chair interior design view' },
-  ];
-
   return (
-    <main className="min-h-screen bg-[#FAF8F5] py-20 px-6 sm:px-12 flex flex-col justify-between">
+    <main className="min-h-screen bg-[#FAF8F5] py-16 px-4 sm:px-8 lg:px-12 flex flex-col justify-between">
       <div className="max-w-7xl mx-auto w-full">
         
         {/* Top Back Link */}
-        <div className="mb-8 flex justify-start">
+        <div className="mb-6 flex justify-start">
           <Link
             href="/#gallery"
-            className="inline-flex items-center gap-2 text-stone-500 hover:text-[#c59842] text-xs sm:text-sm tracking-wider font-semibold uppercase transition-colors group focus:outline-none"
+            className="inline-flex items-center gap-2 text-stone-500 hover:text-[#C59842] text-xs sm:text-sm tracking-wider font-semibold uppercase transition-colors group focus:outline-none"
           >
-            <svg
-              className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform duration-300"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            <span>Back to Gallery</span>
+            <ArrowLeft className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform duration-300" />
+            <span>Back to Home</span>
           </Link>
         </div>
 
         {/* Header Block with Brand Logo */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <div className="relative w-[150px] h-[38px] mb-6 select-none">
+        <div className="flex flex-col items-center text-center mb-8">
+          <div className="relative w-[180px] h-auto mb-4 select-none">
             <Image
-              src="/assets/lorans_logo_black.png"
-              alt="Loran's"
-              fill
-              className="object-contain"
+              src="/assets/hero texxt.png"
+              alt="Loran's Gents Beauty Parlour & Make Up Studio"
+              width={180}
+              height={90}
+              className="object-contain w-full h-auto"
               priority
             />
           </div>
           
-          <h1 className="font-serif text-3xl sm:text-4xl tracking-wide text-stone-900 uppercase">
-            Grooming Gallery
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-wide text-[#1F1F1F] uppercase">
+            Full Grooming Showcase
           </h1>
-          <div className="w-12 h-px bg-[#c59842] my-4" />
-          <p className="font-sans text-xs sm:text-sm text-stone-500 font-light max-w-md">
-            A visual showcase of our premium haircuts, detail beard lines, and luxury therapeutic spa sessions.
+          <div className="w-12 h-[2px] bg-[#C59842] my-4 rounded-full" />
+          <p className="font-sans text-xs sm:text-sm text-stone-600 font-light max-w-md leading-relaxed">
+            Explore our complete portfolio of precision haircuts, beard trims, facials, and grooming videos.
           </p>
         </div>
 
-        {/* Expanded Gallery Grid - Always 3 columns */}
-        <div className="grid grid-cols-3 gap-2 sm:gap-6 mt-8">
-          {galleryItems.map((item) => (
-            <div 
-              key={item.id}
-              className="relative aspect-square overflow-hidden cursor-pointer group bg-stone-100 rounded-sm shadow-md border border-stone-200/40"
-            >
-              <Image
-                src={item.src}
-                alt={item.alt}
-                fill
-                sizes="33vw"
-                className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-              />
-              
-              {/* Luxury dark hover details */}
-              <div 
-                className="absolute inset-0 bg-stone-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 sm:p-4"
-                aria-hidden="true"
-              >
-                <div className="text-center space-y-1 sm:space-y-2">
-                  <span className="font-sans text-[8px] sm:text-[10px] tracking-[0.2em] uppercase text-[#c59842] font-semibold block">
-                    Portfolio
-                  </span>
-                  <span className="font-sans text-[10px] sm:text-xs md:text-sm tracking-wider uppercase text-white font-medium block border-t border-white/20 pt-1.5 sm:pt-2 px-2 sm:px-4">
-                    {item.category}
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Render Dynamic Gallery (Fetches ALL media without limit) */}
+        <div className="pt-2">
+          <Gallery showFilter={true} showViewAllButton={false} />
         </div>
 
       </div>
 
       {/* Footer Copy */}
-      <div className="text-center text-stone-400 text-[10px] tracking-widest font-semibold uppercase mt-20">
-        © {new Date().getFullYear()} Loran&apos;s Hair Cutting Saloon. All Rights Reserved.
+      <div className="text-center text-stone-500 text-[10px] tracking-widest font-semibold uppercase mt-16 pb-8 border-t border-[#ECE7DF] pt-8">
+        © {new Date().getFullYear()} Loran&apos;s Gents Beauty Parlour & Make Up Studio. All Rights Reserved.
       </div>
     </main>
   );

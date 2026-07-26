@@ -97,7 +97,7 @@ export default function Header() {
 
           {/* Desktop Navigation Links */}
           <div className="flex items-center space-x-10 text-xs font-semibold tracking-[0.2em] uppercase text-stone-600">
-            <Link href="/services" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Services</Link>
+            <Link href="/#services" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Services</Link>
             <Link href="/#gallery" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Gallery</Link>
             <Link href="/#about" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Our Story</Link>
             <Link href="/#faq" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">FAQ</Link>
@@ -138,7 +138,7 @@ export default function Header() {
         aria-hidden={!isOpen}
       >
         <div className="px-6 pt-24 pb-8 flex flex-col space-y-6 text-center text-sm font-semibold tracking-[0.25em] uppercase text-stone-600">
-          <Link href="/services" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Services</Link>
+          <Link href="/#services" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Services</Link>
           <Link href="/#gallery" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Gallery</Link>
           <Link href="/#about" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Our Story</Link>
           <Link href="/#faq" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">FAQ</Link>
