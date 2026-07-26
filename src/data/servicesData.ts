@@ -201,13 +201,13 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     totalServices: '2+ SERVICES',
     iconType: 'makeup',
     featured: [
-      'Groom Makeup',
+      'Groom Makeup (Glass Make up,Water Proof Make up etc..)',
       'Special Occasion Grooming'
     ],
     items: [
       {
         name: 'Groom Makeup',
-        description: 'Flawless HD photo-ready skin preparation, subtle tone correction, beard setting, and haircut for your wedding day.',
+        description: 'Glass Makeup, Waterproof Makeup, HD Makeup, and Grooming designed to deliver a natural, long-lasting finish with exceptional comfort and elegance.',
       },
       {
         name: 'Event & Special Occasion Makeup',
@@ -270,11 +270,11 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     ]
   },
   {
-    id: 'hand-and-foot-care',
-    slug: 'hand-and-foot-care',
-    title: 'Hand & Foot Care',
+    id: 'manicure-and-pedicure',
+    slug: 'manicure-and-pedicure',
+    title: 'Manicure & Pedicure',
     shortTitle: 'Care',
-    label: 'HAND & FOOT CARE',
+    label: 'MANICURE & PEDICURE',
     description: 'Relaxing care for soft, refreshed hands and feet.',
     detailHeading: 'Relaxing Manicure & Pedicure Rituals',
     detailDescription: 'Rejuvenating spa care for your hands and feet featuring soothing warm soaks, exfoliation, nail grooming, and tension-relieving massages.',
