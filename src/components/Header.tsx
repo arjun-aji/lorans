@@ -58,7 +58,7 @@ export default function Header() {
 
         {/* RIGHT — Book Appointment Button */}
         <a
-          href={`https://wa.me/917356568307?text=${encodeURIComponent(
+          href={`https://wa.me/919446869346?text=${encodeURIComponent(
             'Please enter the details...\nName:\nDate:\nService: '
           )}`}
           target="_blank"
@@ -107,7 +107,7 @@ export default function Header() {
           {/* CTA Button */}
           <div>
             <a
-              href={`https://wa.me/917356568307?text=${encodeURIComponent(
+              href={`https://wa.me/919446869346?text=${encodeURIComponent(
                 'Please enter the details...\nName:\nDate:\nService: '
               )}`}
               target="_blank"
@@ -144,7 +144,7 @@ export default function Header() {
           <Link href="/#faq" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">FAQ</Link>
           <Link href="/#contact" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Contact</Link>
           <a
-            href={`https://wa.me/917356568307?text=${encodeURIComponent(
+            href={`https://wa.me/919446869346?text=${encodeURIComponent(
               'Please enter the details...\nName:\nDate:\nService: '
             )}`}
             target="_blank"

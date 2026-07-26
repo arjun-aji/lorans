@@ -168,7 +168,7 @@ export default function ServicesPage() {
                     </div>
 
                     <a
-                      href={`https://wa.me/917356568307?text=${encodeURIComponent(
+                      href={`https://wa.me/919446869346?text=${encodeURIComponent(
                         `Please enter the details...\nName:\nDate:\nService: ${item.name}`
                       )}`}
                       target="_blank"
@@ -190,7 +190,7 @@ export default function ServicesPage() {
         {/* Mobile Sticky Bottom Full-Width CTA */}
         <div className="fixed bottom-0 left-0 right-0 z-40 p-3 bg-[#FAF8F5]/90 backdrop-blur-md border-t border-[#ECE7DF] md:hidden">
           <a
-            href={`https://wa.me/917356568307?text=${encodeURIComponent(
+            href={`https://wa.me/919446869346?text=${encodeURIComponent(
               'Please enter the details...\nName:\nDate:\nService: '
             )}`}
             target="_blank"
@@ -400,7 +400,7 @@ export default function ServicesPage() {
 
                       <div className="flex-shrink-0 self-end sm:self-center">
                         <a
-                          href={`https://wa.me/917356568307?text=${encodeURIComponent(
+                          href={`https://wa.me/919446869346?text=${encodeURIComponent(
                             `Please enter the details...\nName:\nDate:\nService: ${item.name}`
                           )}`}
                           target="_blank"

@@ -145,7 +145,7 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
                 {/* Right: Book Now WhatsApp CTA */}
                 <div className="flex-shrink-0 self-end sm:self-center">
                   <a
-                    href={`https://wa.me/917356568307?text=${encodeURIComponent(
+                    href={`https://wa.me/919446869346?text=${encodeURIComponent(
                       `Please enter the details...\nName:\nDate:\nService: ${item.name}`
                     )}`}
                     target="_blank"

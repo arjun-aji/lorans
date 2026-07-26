@@ -118,7 +118,7 @@ export default function Home() {
 
               {/* CTA */}
               <a
-                href={`https://wa.me/917356568307?text=${encodeURIComponent(
+                href={`https://wa.me/919446869346?text=${encodeURIComponent(
                   "Please enter the details...\nName:\nDate:\nService: "
                 )}`}
                 target="_blank"
@@ -272,7 +272,7 @@ export default function Home() {
 
                 {/* CTA */}
                 <a
-                  href={`https://wa.me/917356568307?text=${encodeURIComponent(
+                  href={`https://wa.me/919446869346?text=${encodeURIComponent(
                     "Please enter the details...\nName:\nDate:\nService: "
                   )}`}
                   target="_blank"
