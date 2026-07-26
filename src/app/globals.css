@@ -34,6 +34,7 @@
   --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-fade-in: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-slow-zoom: slow-zoom 20s ease-in-out infinite alternate;
+  --animate-hero-zoom-in: hero-zoom-in 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes fade-in-up {
@@ -65,6 +66,16 @@
   }
 }
 
+@keyframes hero-zoom-in {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -89,4 +100,10 @@ button:focus-visible {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-gold-300);
+}
+
+/* Hero CTA hover */
+a.hero-cta:hover {
+  background: #B58832 !important;
+  box-shadow: 0 8px 28px rgba(197, 152, 66, 0.38) !important;
 }

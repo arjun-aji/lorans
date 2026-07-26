@@ -96,12 +96,13 @@ export default function ServicesPage() {
 
         {/* Header Block with Brand Logo */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="relative w-[150px] h-[38px] mb-6 select-none">
+          <div className="relative mb-6 select-none w-[260px] h-auto">
             <Image
-              src="/assets/lorans_logo_black.png"
-              alt="Loran's"
-              fill
-              className="object-contain"
+              src="/assets/hero texxt.png"
+              alt="Loran's Gents Beauty Parlour & Make Up Studio"
+              width={260}
+              height={130}
+              className="object-contain w-full h-auto"
               priority
             />
           </div>

@@ -32,11 +32,10 @@ export default function Preloader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#FAF8F5] transition-all duration-700 ease-in-out ${
-        isLoading 
-          ? 'opacity-100 pointer-events-auto' 
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#FAF8F5] transition-all duration-700 ease-in-out ${isLoading
+          ? 'opacity-100 pointer-events-auto'
           : 'opacity-0 -translate-y-full pointer-events-none'
-      }`}
+        }`}
     >
       {/* Inline styles for custom keyframe animations */}
       <style>{`
@@ -63,7 +62,7 @@ export default function Preloader() {
 
       {/* Loading Box */}
       <div className="flex flex-col items-center max-w-sm px-6 animate-preloader-fade opacity-0">
-        
+
         {/* Brand Gold Logo */}
         <div className="relative w-[260px] h-[65px] mb-4 select-none">
           <Image
@@ -84,7 +83,7 @@ export default function Preloader() {
         <div className="w-32 h-[1.5px] bg-stone-200/60 relative overflow-hidden rounded-full">
           <div className="animate-preloader-bar rounded-full" />
         </div>
-        
+
       </div>
     </div>
   );
