@@ -8,10 +8,10 @@ const LOCAL_FALLBACK_URL_5000 = 'http://localhost:5000/api';
 export const fetchGalleryItems = async (): Promise<GalleryItem[]> => {
   let responseData: GalleryResponse | null = null;
 
-  // Try production backend URL first (with 10s timeout for Render cold-starts)
+  // Try production backend URL first (with 30s timeout for Render cold-starts)
   try {
     const res = await axios.get<GalleryResponse>(`${API_BASE_URL}/gallery?limit=100`, {
-      timeout: 10000,
+      timeout: 30000,
     });
     responseData = res.data;
   } catch (error) {
