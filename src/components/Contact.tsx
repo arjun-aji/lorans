@@ -322,7 +322,7 @@ export default function Contact() {
 
           {/* Copyright Bottom Bar */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-stone-500 text-[10px] tracking-widest font-semibold uppercase">
-            <span>© {new Date().getFullYear()} Loran&apos;s Hair Cutting Saloon. All Rights Reserved.</span>
+            <span>© {new Date().getFullYear()} Loran&apos;s Gents Beauty Parlour & Make Up Studio. All Rights Reserved.</span>
             <span>Where Style Meets Precision</span>
           </div>
 
