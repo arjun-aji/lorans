@@ -107,3 +107,13 @@ a.hero-cta:hover {
   background: #B58832 !important;
   box-shadow: 0 8px 28px rgba(197, 152, 66, 0.38) !important;
 }
+
+/* Hide scrollbar for clean horizontal chip scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

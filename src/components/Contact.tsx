@@ -24,10 +24,10 @@ export default function Contact() {
       <section className="py-24 border-t border-stone-200/40 lg:min-h-screen lg:flex lg:items-center" aria-labelledby="contact-heading">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
           <div className="grid grid-cols-1 md:grid-cols-12 bg-white border border-stone-200/40 rounded-sm shadow-xl overflow-hidden">
-            
+
             {/* Left Column: Contact Details with low-opacity interior image overlay */}
             <div className="md:col-span-5 relative flex flex-col justify-between p-8 sm:p-12 text-stone-900 overflow-hidden min-h-[400px]">
-              
+
               {/* Background Interior Image Faded */}
               <div className="absolute inset-0 z-0 opacity-[0.06] select-none">
                 <Image
@@ -41,15 +41,15 @@ export default function Contact() {
 
               {/* Gradient tint overlay to keep text 100% accessible and readable */}
               <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#FAF8F5]/90 via-[#FAF8F5]/50 to-transparent" aria-hidden="true" />
-              
+
               {/* Info Content Wrapper */}
               <div className="relative z-20 flex flex-col h-full justify-between gap-12">
                 <div>
                   <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] font-semibold text-amber-800 uppercase mb-3 block">
                     Contact Us
                   </span>
-                  <h2 
-                    id="contact-heading" 
+                  <h2
+                    id="contact-heading"
                     className="font-serif text-3xl sm:text-4xl font-light tracking-wide text-stone-900 uppercase"
                   >
                     Let&apos;s Connect
@@ -59,7 +59,7 @@ export default function Contact() {
 
                 {/* Details List */}
                 <div className="space-y-6 font-sans text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
-                  
+
                   {/* Address */}
                   <div className="flex items-start gap-4">
                     <span className="flex-shrink-0 mt-1" aria-hidden="true">
@@ -69,12 +69,12 @@ export default function Contact() {
                       </svg>
                     </span>
                     <p>
-                      123, M G Road, Near City Center,<br />
-                      Kochi, Kerala 682016
+                      Near Ramaloor St Jude chapel,<br />
+                      Kothamangalam, Kerala 686691
                     </p>
                   </div>
 
-                  {/* Phone Numbers from the board */}
+                  {/* Phone Number */}
                   <div className="flex items-start gap-4">
                     <span className="flex-shrink-0 mt-1" aria-hidden="true">
                       <svg className="w-5 h-5 text-[#c59842] fill-none stroke-current stroke-[1.5]" viewBox="0 0 24 24">
@@ -82,7 +82,6 @@ export default function Contact() {
                       </svg>
                     </span>
                     <div className="flex flex-col">
-                      <a href="tel:+918921523412" className="hover:text-[#c59842] transition-colors focus-visible:outline-none">+91 89215 23412</a>
                       <a href="tel:+919446869346" className="hover:text-[#c59842] transition-colors focus-visible:outline-none">+91 94468 69346</a>
                     </div>
                   </div>
@@ -107,31 +106,42 @@ export default function Contact() {
                       </svg>
                     </span>
                     <div>
-                      <p>Mon - Sat : 9:00 AM - 8:00 PM</p>
-                      <p>Sunday : 10:00 AM - 5:00 PM</p>
+                      <p>Mon - Sat : 9:00 AM - 9:00 PM</p>
+                      <p>Sunday : 9:00 AM - 8:00 PM</p>
                     </div>
                   </div>
 
                 </div>
 
-                {/* Small Map Embed */}
-                <div className="relative w-full h-[135px] border border-stone-200/50 rounded-sm overflow-hidden shadow-sm z-20 mt-2">
-                  <iframe
-                    title="Loran's Hair Cutting Saloon Location Map"
-                    src="https://maps.google.com/maps?q=123,%20M%20G%20Road,%20Near%20City%20Center,%20Kochi,%20Kerala%20682016&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={false}
-                    loading="lazy"
+                {/* Interactive Map Image Embed */}
+                <a
+                  href="https://maps.app.goo.gl/8Sz3qJuR3UqKZNQm7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full h-[145px] border border-stone-200/60 rounded-md overflow-hidden shadow-sm z-20 mt-2 block group"
+                  aria-label="Open Loran's location in Google Maps"
+                >
+                  <Image
+                    src="/assets/map.png"
+                    alt="Loran's location map near Ramaloor St Jude chapel, Kothamangalam"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 400px"
                   />
-                </div>
+                  <div className="absolute inset-0 bg-stone-900/10 group-hover:bg-stone-900/0 transition-colors" aria-hidden="true" />
+                  <div className="absolute bottom-2 right-2 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-semibold text-[#c59842] uppercase tracking-wider shadow flex items-center gap-1">
+                    <span>Open Maps</span>
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                </a>
               </div>
 
             </div>
 
             {/* Right Column: Contact Message Form */}
-            <form 
+            <form
               onSubmit={handleFormSubmit}
               className="md:col-span-7 p-8 sm:p-12 flex flex-col justify-between gap-6 bg-stone-50/50"
               aria-label="Send a message to Loran's Salon"
@@ -148,7 +158,7 @@ export default function Contact() {
                     className="bg-white border border-stone-200/80 p-3 sm:p-4 text-xs sm:text-sm rounded-sm focus:outline-none focus:border-[#c59842] focus:ring-1 focus:ring-[#c59842] transition-colors placeholder:text-stone-300"
                   />
                 </div>
-                
+
                 {/* Phone */}
                 <div className="flex flex-col gap-2">
                   <label htmlFor="phone-input" className="text-[10px] tracking-wider font-semibold text-stone-500 uppercase">Phone Number</label>
@@ -211,24 +221,25 @@ export default function Contact() {
       {/* Premium Multi-Column Footer */}
       <footer className="bg-[#F4F1EA] text-stone-600 py-16 border-t border-stone-200 relative z-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          
+
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 pb-12 border-b border-stone-200">
-            
+
             {/* Logo and brand message */}
             <div className="md:col-span-5 flex flex-col items-start gap-4">
-              <div className="relative w-[110px] h-[28px] select-none">
+              <div className="relative w-[180px] h-auto select-none">
                 <Image
-                  src="/assets/lorans_logo_black.png"
-                  alt="Loran's"
-                  fill
-                  className="object-contain"
+                  src="/assets/hero texxt.png"
+                  alt="Loran's Gents Beauty Parlour & Make Up Studio"
+                  width={180}
+                  height={90}
+                  className="object-contain w-full h-auto"
                 />
               </div>
               <span className="font-sans text-[9px] tracking-[0.25em] font-bold text-[#c59842] uppercase leading-none block">
-                Hair Cutting Saloon
+                Female Hair Cutting
               </span>
               <p className="font-sans text-xs text-stone-500 font-light leading-relaxed max-w-xs mt-2">
-                Premium grooming experience crafted for the modern gentleman. Step in to look and feel your absolute best.
+                Grooming experience crafted for the modern gentleman. Step in to look and feel your absolute best.
               </p>
             </div>
 
@@ -253,9 +264,9 @@ export default function Contact() {
                 <span className="text-[10px] tracking-widest font-bold text-stone-950 uppercase">Follow Us</span>
                 <div className="flex gap-3">
                   {/* Instagram */}
-                  <a 
-                    href="https://instagram.com" 
-                    target="_blank" 
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="border border-[#c59842]/40 text-[#c59842] hover:bg-[#c59842] hover:text-white transition-colors w-9 h-9 rounded-full flex items-center justify-center focus-visible:outline-none"
                     aria-label="Follow us on Instagram"
@@ -266,11 +277,11 @@ export default function Contact() {
                       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                     </svg>
                   </a>
-                  
+
                   {/* Facebook */}
-                  <a 
-                    href="https://facebook.com" 
-                    target="_blank" 
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="border border-[#c59842]/40 text-[#c59842] hover:bg-[#c59842] hover:text-white transition-colors w-9 h-9 rounded-full flex items-center justify-center focus-visible:outline-none"
                     aria-label="Follow us on Facebook"
@@ -279,11 +290,11 @@ export default function Contact() {
                       <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.9.2-1.2 1-1.2h2V2h-3c-2.5 0-4 1.2-4 3.8V8z" />
                     </svg>
                   </a>
-                  
+
                   {/* WhatsApp chat using the board numbers */}
-                  <a 
-                    href="https://wa.me/918921523412" 
-                    target="_blank" 
+                  <a
+                    href="https://wa.me/919446869346"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="border border-[#c59842]/40 text-[#c59842] hover:bg-[#c59842] hover:text-white transition-colors w-9 h-9 rounded-full flex items-center justify-center focus-visible:outline-none"
                     aria-label="Chat with us on WhatsApp"

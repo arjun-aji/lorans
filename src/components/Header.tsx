@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,16 +10,15 @@ export default function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#ECE7DF]/60 shadow-sm transition-all duration-300">
 
       {/* ─── MOBILE NAVBAR (< md) ────────────────────────────────────────────── */}
-      {/* Three-zone: [Hamburger] [Logo centered] [Spacer] */}
-      <div className="md:hidden w-full px-5 h-16 flex items-center justify-between relative border-b border-[#ECE7DF]" style={{ background: 'rgba(250,248,245,0.75)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}>
+      <div className="md:hidden w-full px-5 h-16 flex items-center justify-between relative">
 
-        {/* LEFT — Hamburger (44×44 touch target) */}
+        {/* LEFT — Hamburger */}
         <button
           onClick={toggleMenu}
-          className="flex flex-col justify-center items-center w-11 h-11 space-y-[5px] focus:outline-none relative z-50 flex-shrink-0"
+          className="flex flex-col justify-center items-center w-11 h-11 space-y-[5px] focus:outline-none relative z-50 flex-shrink-0 cursor-pointer"
           aria-expanded={isOpen}
           aria-label="Toggle Menu"
         >
@@ -39,10 +39,10 @@ export default function Header() {
           />
         </button>
 
-        {/* CENTER — Logo, absolutely centered in the bar */}
-        <a
-          href="#"
-          className="focus-visible:outline-none block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        {/* CENTER — Logo */}
+        <Link
+          href="/"
+          className="focus-visible:outline-none block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50"
           aria-label="Loran's Home"
         >
           <div className="relative w-[120px] sm:w-[160px] h-[36px] sm:h-[42px]">
@@ -54,7 +54,7 @@ export default function Header() {
               className="object-contain"
             />
           </div>
-        </a>
+        </Link>
 
         {/* RIGHT — Book Appointment Button */}
         <a
@@ -69,18 +69,17 @@ export default function Header() {
         </a>
       </div>
 
-      {/* ─── DESKTOP NAVBAR (≥ md) — UNCHANGED ───────────────────────────────── */}
+      {/* ─── DESKTOP NAVBAR (≥ md) ───────────────────────────────────────────── */}
       <nav
         className="hidden md:flex w-full h-20 items-center"
         aria-label="Main Navigation"
       >
-        {/* Inner container matches page content width & padding */}
         <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full flex items-center justify-between">
 
           {/* Brand Logo */}
           <div className="flex items-center">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="focus-visible:outline-none block"
               aria-label="Loran's Home"
             >
@@ -93,16 +92,16 @@ export default function Header() {
                   className="object-contain"
                 />
               </div>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation Links */}
           <div className="flex items-center space-x-10 text-xs font-semibold tracking-[0.2em] uppercase text-stone-600">
-            <a href="#services" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Services</a>
-            <a href="#gallery"  className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Gallery</a>
-            <a href="#about"    className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Our Story</a>
-            <a href="#faq"      className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">FAQ</a>
-            <a href="#contact"  className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Contact</a>
+            <Link href="/services" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Services</Link>
+            <Link href="/#gallery" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Gallery</Link>
+            <Link href="/#about" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Our Story</Link>
+            <Link href="/#faq" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">FAQ</Link>
+            <Link href="/#contact" className="hover:text-stone-900 hover:tracking-[0.25em] transition-all duration-300">Contact</Link>
           </div>
 
           {/* CTA Button */}
@@ -122,7 +121,6 @@ export default function Header() {
         </div>
       </nav>
 
-
       {/* ─── MOBILE BACKDROP OVERLAY ──────────────────────────────────────────── */}
       {isOpen && (
         <div
@@ -134,17 +132,17 @@ export default function Header() {
 
       {/* ─── MOBILE DRAWER ────────────────────────────────────────────────────── */}
       <div
-        className={`fixed top-0 right-0 bottom-0 h-screen w-1/2 bg-[#FAF8F5]/85 backdrop-blur-md border-l border-stone-200 shadow-2xl transition-transform duration-300 ease-in-out md:hidden z-40 ${
+        className={`fixed top-0 right-0 bottom-0 h-screen w-2/3 sm:w-1/2 bg-[#FAF8F5]/95 backdrop-blur-lg border-l border-stone-200 shadow-2xl transition-transform duration-300 ease-in-out md:hidden z-40 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-hidden={!isOpen}
       >
         <div className="px-6 pt-24 pb-8 flex flex-col space-y-6 text-center text-sm font-semibold tracking-[0.25em] uppercase text-stone-600">
-          <a href="#services" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Services</a>
-          <a href="#gallery"  onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Gallery</a>
-          <a href="#about"    onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Our Story</a>
-          <a href="#faq"      onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">FAQ</a>
-          <a href="#contact"  onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Contact</a>
+          <Link href="/services" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Services</Link>
+          <Link href="/#gallery" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Gallery</Link>
+          <Link href="/#about" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Our Story</Link>
+          <Link href="/#faq" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">FAQ</Link>
+          <Link href="/#contact" onClick={toggleMenu} className="hover:text-stone-950 transition-colors py-1">Contact</Link>
           <a
             href={`https://wa.me/917356568307?text=${encodeURIComponent(
               'Please enter the details...\nName:\nDate:\nService: '

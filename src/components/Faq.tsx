@@ -7,16 +7,16 @@ export default function Faq() {
 
   const faqs = [
     {
-      question: "What are Loran's Hair Cutting Saloon working hours?",
-      answer: "We are open Monday through Saturday from 9:00 AM to 8:00 PM, and on Sundays from 10:00 AM to 5:00 PM.",
+      question: "What are Loran's Gents Beauty Parlour working hours?",
+      answer: "We are open Monday through Saturday from 9:00 AM to 9:00 PM, and on Sundays from 9:00 AM to 8:00 PM.",
     },
     {
       question: "Do I need to book an appointment in advance?",
       answer: "While we accept walk-in clients based on our barbers' availability, we highly recommend booking an appointment online in advance to secure your preferred time slot and avoid any waiting.",
     },
     {
-      question: "Where is the saloon located?",
-      answer: "Loran's Hair Cutting Saloon is located at 123, M G Road, Near City Center, Kochi, Kerala 682016. You can find our exact location details and contact details in the section below.",
+      question: "Where is the Gents Beauty Parlour located?",
+      answer: "Loran's Gents Beauty Parlour is located near Ramaloor St. Jude Chapel in Kothamangalam, Kerala (686691). You can view our location map and get directions in the contact section below.",
     },
     {
       question: "Do you offer grooming services for children?",
@@ -33,20 +33,20 @@ export default function Faq() {
   };
 
   return (
-    <section 
-      id="faq" 
+    <section
+      id="faq"
       className="py-24 bg-white border-t border-stone-200/40 lg:min-h-screen lg:flex lg:items-center"
       aria-labelledby="faq-heading"
     >
       <div className="max-w-4xl mx-auto px-6 w-full">
-        
+
         {/* Section Header */}
         <div className="text-center flex flex-col items-center mb-16">
           <span className="font-sans text-[11px] sm:text-xs tracking-[0.25em] font-semibold text-amber-800 uppercase mb-3">
             Common Questions
           </span>
-          <h2 
-            id="faq-heading" 
+          <h2
+            id="faq-heading"
             className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light tracking-wide text-stone-900 uppercase"
           >
             Frequently Asked Questions
@@ -59,8 +59,8 @@ export default function Faq() {
           {faqs.map((faq, index) => {
             const isOpen = activeIndex === index;
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="border-b border-stone-200/60 pb-4 transition-all duration-300"
               >
                 <button
@@ -72,12 +72,11 @@ export default function Faq() {
                   <span className="font-sans font-semibold text-sm sm:text-base text-stone-850 group-hover:text-[#c59842] transition-colors duration-300">
                     {faq.question}
                   </span>
-                  
+
                   {/* Chevron Icon */}
-                  <span 
-                    className={`ml-4 text-stone-400 group-hover:text-[#c59842] transition-transform duration-300 ${
-                      isOpen ? 'transform rotate-180 text-[#c59842]' : ''
-                    }`}
+                  <span
+                    className={`ml-4 text-stone-400 group-hover:text-[#c59842] transition-transform duration-300 ${isOpen ? 'transform rotate-180 text-[#c59842]' : ''
+                      }`}
                     aria-hidden="true"
                   >
                     <svg className="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
@@ -85,15 +84,14 @@ export default function Faq() {
                     </svg>
                   </span>
                 </button>
-                
+
                 {/* Expandable Answer */}
                 <div
                   id={`faq-answer-${index}`}
                   role="region"
                   aria-labelledby={`faq-question-${index}`}
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? 'max-h-[150px] opacity-100 mt-2' : 'max-h-0 opacity-0'
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[150px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+                    }`}
                 >
                   <p className="font-sans text-stone-500 font-light text-xs sm:text-sm leading-relaxed max-w-3xl pb-2">
                     {faq.answer}
