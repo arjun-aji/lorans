@@ -236,7 +236,7 @@ export default function Contact() {
                 />
               </div>
               <span className="font-sans text-[9px] tracking-[0.25em] font-bold text-[#c59842] uppercase leading-none block">
-                Female Hair Cutting
+                Ladies Hair Cutting
               </span>
               <p className="font-sans text-xs text-stone-500 font-light leading-relaxed max-w-xs mt-2">
                 Grooming experience crafted for the modern gentleman. Step in to look and feel your absolute best.
