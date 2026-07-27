@@ -81,8 +81,8 @@ export default function Gallery({
         </div>
       </div>
 
-      {/* Full-width Rectangular 3D Image Banner Strip (No boxed/card styling, no text writing) */}
-      <div className="w-full h-[360px] sm:h-[450px] lg:h-[500px] relative bg-[#12100E] overflow-hidden my-4 sm:my-8 shadow-md">
+      {/* Full-width Rectangular 3D Image Banner Strip (Background #FAF8F5) */}
+      <div className="w-full h-[360px] sm:h-[450px] lg:h-[500px] relative bg-[#FAF8F5] overflow-hidden my-4 sm:my-8">
         <CircularGallery
           bend={3}
           textColor="transparent"
