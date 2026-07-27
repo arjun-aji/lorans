@@ -265,7 +265,7 @@ export default function Contact() {
                 <div className="flex gap-3">
                   {/* Instagram */}
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/lorans_gents_makeup_studio?igsh=MXdqczIyMW4xZmFweA=="
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border border-[#c59842]/40 text-[#c59842] hover:bg-[#c59842] hover:text-white transition-colors w-9 h-9 rounded-full flex items-center justify-center focus-visible:outline-none"
