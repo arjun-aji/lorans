@@ -28,10 +28,10 @@ export default function About() {
             {/* Description Text */}
             <div className="font-sans text-stone-600 font-light leading-relaxed text-sm sm:text-base space-y-6 max-w-2xl">
               <p>
-                At Loran&apos;s, every haircut is more than just a service – it&apos;s an experience. Our skilled barbers combine technique, creativity, and precision to bring out the best in you.
+                Loran&apos;s Gents Beauty Parlour &amp; Make Up Studio is your destination for professional grooming, beauty, and makeup services. From stylish men&apos;s grooming and ladies&apos; haircuts to advanced hair treatments, facials, skin care, waxing, manicure &amp; pedicure, and wedding makeup, we offer complete beauty solutions under one roof.
               </p>
               <p>
-                Step in, relax, and leave looking your absolute best.
+                With years of experience and a passion for excellence, we deliver personalized services that help every client look confident, refreshed, and their very best.
               </p>
             </div>
 
@@ -57,13 +57,13 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5.5 6c-1 0-1.5.5-1.5 1.5v2c0 1 .5 1.5 1.5 1.5h1M18.5 6c1 0 1.5.5 1.5 1.5v2c0 1-.5 1.5-1.5 1.5h-1" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 22h6M12 18v4" />
                 </svg>
-                <span className="font-sans font-bold text-xl sm:text-2xl text-stone-900">10+</span>
+                <span className="font-sans font-bold text-xl sm:text-2xl text-stone-900">20+</span>
                 <span className="font-sans text-[8px] sm:text-[9px] tracking-widest text-stone-500 font-semibold text-center mt-1.5 uppercase leading-snug">
                   Years of<br />Experience
                 </span>
               </div>
 
-              {/* Stat 2: Happy Clients */}
+              {/* Stat 2: Happy Customers */}
               <div className="flex flex-col items-center justify-center p-5 bg-white border border-stone-200/50 rounded-sm shadow-sm hover:shadow-md hover:border-[#c59842]/40 transition-all duration-300 group">
                 <svg 
                   className="w-7 h-7 text-[#c59842] fill-none stroke-current stroke-[1.2] mb-3 group-hover:scale-115 transition-transform duration-300" 
@@ -75,13 +75,13 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M23 21v-2a4 4 0 00-3-3.87" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M16 3.13a4 4 0 010 7.75" />
                 </svg>
-                <span className="font-sans font-bold text-xl sm:text-2xl text-stone-900">10000+</span>
+                <span className="font-sans font-bold text-xl sm:text-2xl text-stone-900">5000+</span>
                 <span className="font-sans text-[8px] sm:text-[9px] tracking-widest text-stone-500 font-semibold text-center mt-1.5 uppercase leading-snug">
-                  Happy<br />Clients
+                  Happy<br />Customers
                 </span>
               </div>
 
-              {/* Stat 3: Barbers */}
+              {/* Stat 3: Professional Workers */}
               <div className="flex flex-col items-center justify-center p-5 bg-white border border-stone-200/50 rounded-sm shadow-sm hover:shadow-md hover:border-[#c59842]/40 transition-all duration-300 group">
                 <svg 
                   className="w-7 h-7 text-[#c59842] fill-none stroke-current stroke-[1.2] mb-3 group-hover:scale-115 transition-transform duration-300" 
@@ -92,9 +92,9 @@ export default function About() {
                   <circle cx="6" cy="18" r="3" strokeLinecap="round" strokeLinejoin="round" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M20 4L8.5 11.7M8.5 12.3L20 20" />
                 </svg>
-                <span className="font-sans font-bold text-xl sm:text-2xl text-stone-900">6+</span>
+                <span className="font-sans font-bold text-xl sm:text-2xl text-stone-900">3</span>
                 <span className="font-sans text-[8px] sm:text-[9px] tracking-widest text-stone-500 font-semibold text-center mt-1.5 uppercase leading-snug">
-                  Professional<br />Barbers
+                  Professional<br />Workers
                 </span>
               </div>
 

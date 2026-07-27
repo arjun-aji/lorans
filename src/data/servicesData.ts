@@ -27,7 +27,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     title: 'Hair Cutting & Styling',
     shortTitle: 'Hair',
     label: 'HAIR CUTTING & STYLING',
-    description: 'Classic cuts, modern styles and premium finishing for every look.',
+    description: 'Classic cuts, modern styles and finishing for every look.',
     detailHeading: 'Precision Cuts & Timeless Styling',
     detailDescription: 'Classic cuts, modern fades, and custom styling tailored specifically to your facial structure and personal hair type.',
     image: '/assets/fade_haircut.png',
@@ -47,7 +47,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       },
       {
         name: 'Ladies Haircut',
-        description: 'Layer cuts, bob cuts, and precision trims designed to bring out your natural beauty and hair volume.',
+        description: 'Layer cuts, bob cuts, Butterfly cuts, Wolf cuts and Many more to bring out your natural beauty and hair volume.',
       },
       {
         name: 'Kids Haircut',
@@ -71,8 +71,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     label: 'HAIR TREATMENTS',
     description: 'Treatments that repair, nourish and transform your hair.',
     detailHeading: 'Advanced Care & Restorative Hair Spa',
-    detailDescription: 'Professional salon treatments designed to restore moisture, prevent breakage, repair damaged fibers, and refresh the scalp.',
-    image: '/assets/hero.jpeg',
+    detailDescription: 'Treatments designed to restore moisture, prevent breakage, repair damaged fibers, and refresh the scalp.',
+    image: '/assets/hair treatment.png',
     totalServices: '10+ SERVICES',
     iconType: 'spa',
     featured: [
@@ -81,7 +81,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       'Smoothening',
       'Hair Spa',
       'Hair Coloring',
-      'Hair Straightening'
+      'Hair Straightening',
+      'Scalp Detox & Anti-Dandruff'
     ],
     items: [
       {
@@ -106,7 +107,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       },
       {
         name: 'Hair Coloring',
-        description: 'Grey coverage, global coloring, or custom highlights using scalp-safe, high-end color formulas.',
+        description: 'Grey coverage, global coloring, or custom highlights using scalp-safe colour formulas.',
       },
       {
         name: 'Scalp Detox & Anti-Dandruff',
@@ -122,8 +123,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     label: 'FACIAL TREATMENTS',
     description: 'Glow-boosting facials for healthy, clear and radiant skin.',
     detailHeading: 'Facials for Radiant, Healthy Skin',
-    detailDescription: 'Indulge in our signature medical-grade and organic facials formulated to deeply cleanse, exfoliate, and illuminate your complexion.',
-    image: '/assets/facial_mask.png',
+    detailDescription: 'Enjoy our signature facials for clean, glowing skin.',
+    image: '/assets/facial.png',
     totalServices: '100+ TREATMENTS',
     iconType: 'facial',
     featured: [
@@ -131,12 +132,13 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       'Korean Facial',
       'Gold Facial',
       'Whitening Facial',
-      '100+ Premium Facials'
+      'De-Tan Facial',
+      '100+ Facials'
     ],
     items: [
       {
         name: 'Hydra Facial',
-        description: 'Deep cleansing and intense hydration for a refreshed, glowing complexion using advanced vortex extraction.',
+        description: 'Deep cleansing and intense hydration for a refreshed, glowing complexion using vortex extraction.',
       },
       {
         name: 'Korean Facial',
@@ -144,15 +146,15 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       },
       {
         name: 'Gold Facial',
-        description: '24K gold infused facial that enhances natural glow, boosts collagen, and revitalizes tired, dull skin.',
+        description: 'Gold infused facial that enhances natural glow, boosts collagen, and revitalizes tired, dull skin.',
       },
       {
         name: 'Diamond Facial',
-        description: 'Micro-exfoliating diamond therapy that brightens skin tone, reduces fine lines, and delivers a flawless finish.',
+        description: 'Diamond therapy that brightens skin tone, reduces fine lines, and delivers a flawless finish.',
       },
       {
         name: 'Platinum Facial',
-        description: 'Premium anti-aging facial that restores skin firmness, elasticity, and youthful radiance.',
+        description: 'Anti-aging facial that restores skin firmness, elasticity, and youthful radiance.',
       },
       {
         name: 'Silver Facial',
@@ -176,7 +178,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       },
       {
         name: 'Clean Up',
-        description: 'Essential deep pore cleansing to clear dirt, excess sebum, blackheads, and dead skin cells.',
+        description: 'Deep pore cleansing to clear dirt, excess sebum, blackheads, and dead skin cells.',
       },
       {
         name: 'Bleaching',
@@ -197,7 +199,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     description: 'Elegant makeup and grooming for every special occasion.',
     detailHeading: 'Groom & Event Styling',
     detailDescription: 'Makeup and bespoke grooming experiences crafted specifically for grooms, groomsmen, and special celebrations.',
-    image: '/assets/about_interior.png',
+    image: '/assets/grooming.png',
     totalServices: '2+ SERVICES',
     iconType: 'makeup',
     featured: [
@@ -232,7 +234,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     description: 'Smooth, clean and comfortable waxing for all your needs.',
     detailHeading: 'Gentle & Hygienic Waxing Services',
     detailDescription: 'Hygienic, low-discomfort hair removal using premium organic hot and strip waxes for ultra-smooth skin.',
-    image: '/assets/beard_grooming.png',
+    image: '/assets/waxing.png',
     totalServices: '5+ SERVICES',
     iconType: 'waxing',
     featured: [
@@ -276,9 +278,9 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     shortTitle: 'Care',
     label: 'MANICURE & PEDICURE',
     description: 'Relaxing care for soft, refreshed hands and feet.',
-    detailHeading: 'Relaxing Manicure & Pedicure Rituals',
+    detailHeading: 'Relaxing Manicure & Pedicure',
     detailDescription: 'Rejuvenating spa care for your hands and feet featuring soothing warm soaks, exfoliation, nail grooming, and tension-relieving massages.',
-    image: '/assets/1.png',
+    image: '/assets/manicure.png',
     totalServices: '2+ SERVICES',
     iconType: 'hand',
     featured: [

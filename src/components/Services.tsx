@@ -7,25 +7,25 @@ import { SERVICE_CATEGORIES } from '@/data/servicesData';
 
 export default function Services() {
   return (
-    <section 
-      id="services" 
+    <section
+      id="services"
       className="py-16 sm:py-24 bg-[#FAF8F5] border-t border-[#ECE7DF] lg:min-h-screen lg:flex lg:items-center"
       aria-labelledby="services-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
-        
+
         {/* Section Header */}
         <div className="text-center flex flex-col items-center max-w-2xl mx-auto">
           <span className="font-sans text-[11px] sm:text-xs tracking-[0.3em] font-semibold text-[#C59842] uppercase mb-2">
             Our Services
           </span>
-          <h2 
-            id="services-heading" 
+          <h2
+            id="services-heading"
             className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-[#1F1F1F]"
           >
             Look Good, Feel Great
           </h2>
-          
+
           {/* Subtle Luxury Divider */}
           <div className="flex items-center justify-center gap-3 my-4 sm:my-5" aria-hidden="true">
             <div className="w-10 h-[1px] bg-[#ECE7DF]" />
@@ -34,7 +34,7 @@ export default function Services() {
           </div>
 
           <p className="font-sans text-stone-600 font-light text-xs sm:text-sm lg:text-base leading-relaxed px-2">
-            Explore our premium grooming and beauty services tailored for every occasion.
+            Explore our grooming and beauty services tailored for every occasion.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function Services() {
               <div>
                 {/* Header Row with Icon & Title */}
                 <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 mb-3 sm:mb-4">
-                  <div 
+                  <div
                     className="w-10 h-10 sm:w-14 sm:h-14 rounded-full border border-[#C59842]/30 bg-[#FAF8F5] flex items-center justify-center text-[#C59842] flex-shrink-0 group-hover:bg-[#C59842] group-hover:text-white transition-colors duration-300"
                     aria-hidden="true"
                   >
@@ -85,10 +85,10 @@ export default function Services() {
                 </span>
                 <span className="font-sans text-[10px] sm:text-xs tracking-wider font-semibold uppercase text-[#C59842] group-hover:text-[#B58832] inline-flex items-center gap-1 sm:gap-1.5 transition-colors">
                   <span>Explore</span>
-                  <svg 
-                    className="w-3 h-3 sm:w-3.5 sm:h-3.5 transform group-hover:translate-x-1 transition-transform duration-300" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
+                  <svg
+                    className="w-3 h-3 sm:w-3.5 sm:h-3.5 transform group-hover:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
