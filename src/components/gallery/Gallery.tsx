@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { useGallery } from '@/hooks/useGallery';
 import { GalleryItem, GalleryFilterType } from '@/types/gallery';
@@ -8,6 +8,7 @@ import GalleryGrid from './GalleryGrid';
 import GalleryFilter from './GalleryFilter';
 import GallerySkeleton from './GallerySkeleton';
 import GalleryLightbox from './GalleryLightbox';
+import CircularGallery from '../CircularGallery';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 interface GalleryProps {
@@ -29,6 +30,14 @@ export default function Gallery({
     filter: currentFilter,
   });
 
+  const circularGalleryItems = useMemo(() => {
+    if (!items || items.length === 0) return undefined;
+    return items.map((item) => ({
+      image: item.thumbnail_url || item.secure_url || item.media_url,
+      text: '', // Fulfill user request: no writing under images
+    }));
+  }, [items]);
+
   // If API fails completely with no cached items, hide the section gracefully
   if (isError && items.length === 0) {
     return null;
@@ -49,34 +58,42 @@ export default function Gallery({
   return (
     <section 
       id="gallery" 
-      className="py-12 sm:py-24 bg-[#FAF8F5] border-t border-[#ECE7DF] lg:min-h-screen lg:flex lg:items-center"
+      className="py-12 sm:py-20 bg-[#FAF8F5] border-t border-[#ECE7DF] flex flex-col justify-center overflow-hidden"
       aria-labelledby="gallery-heading"
     >
-      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-12 w-full">
+      {/* Section Header */}
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-12 w-full text-center flex flex-col items-center mb-4 sm:mb-6">
+        <span className="font-sans text-[10px] sm:text-xs tracking-[0.3em] font-semibold text-[#C59842] uppercase mb-1 sm:mb-2">
+          Showcase
+        </span>
+        <h2 
+          id="gallery-heading" 
+          className="font-serif text-[28px] sm:text-4xl lg:text-5xl font-normal tracking-tight text-[#1F1F1F] uppercase leading-tight"
+        >
+          Our Finest Work
+        </h2>
         
-        {/* Section Header */}
-        <div className="text-center flex flex-col items-center max-w-2xl mx-auto mb-6 sm:mb-10">
-          <span className="font-sans text-[10px] sm:text-xs tracking-[0.3em] font-semibold text-[#C59842] uppercase mb-1 sm:mb-2">
-            Showcase
-          </span>
-          <h2 
-            id="gallery-heading" 
-            className="font-serif text-[28px] sm:text-4xl lg:text-5xl font-normal tracking-tight text-[#1F1F1F] uppercase leading-tight"
-          >
-            Our Finest Work
-          </h2>
-          
-          {/* Subtle Luxury Divider */}
-          <div className="flex items-center justify-center gap-2.5 my-3 sm:my-5" aria-hidden="true">
-            <div className="w-8 sm:w-10 h-[1px] bg-[#ECE7DF]" />
-            <span className="text-[#C59842] text-[10px] sm:text-[11px]">✕</span>
-            <div className="w-8 sm:w-10 h-[1px] bg-[#ECE7DF]" />
-          </div>
-
-          <p className="font-sans text-stone-600 font-light text-sm sm:text-base leading-relaxed px-2">
-            A curated showcase of our haircuts, beard lines, facials, and grooming videos.
-          </p>
+        {/* Subtle Luxury Divider */}
+        <div className="flex items-center justify-center gap-2.5 my-3 sm:my-4" aria-hidden="true">
+          <div className="w-8 sm:w-10 h-[1px] bg-[#ECE7DF]" />
+          <span className="text-[#C59842] text-[10px] sm:text-[11px]">✕</span>
+          <div className="w-8 sm:w-10 h-[1px] bg-[#ECE7DF]" />
         </div>
+      </div>
+
+      {/* Full-width Rectangular 3D Image Banner Strip (No boxed/card styling, no text writing) */}
+      <div className="w-full h-[360px] sm:h-[450px] lg:h-[500px] relative bg-[#12100E] overflow-hidden my-4 sm:my-8 shadow-md">
+        <CircularGallery
+          bend={3}
+          textColor="transparent"
+          borderRadius={0.04}
+          scrollEase={0.025}
+          scrollSpeed={2.5}
+          items={circularGalleryItems}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-12 w-full">
 
         {/* Media Type Filter Tabs (All / Photos / Videos) */}
         {showFilter && (
