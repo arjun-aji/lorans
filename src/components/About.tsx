@@ -105,7 +105,7 @@ export default function About() {
           <div className="md:col-span-5 w-full">
             <div className="relative h-[280px] sm:h-[380px] lg:h-[460px] w-full overflow-hidden shadow-xl rounded-sm group">
               <Image
-                src="/assets/about_interior.png"
+                src="/assets/about1.png"
                 alt="Luxurious styling stations at Loran's Hair Cutting Saloon featuring leather chairs and premium backlighting"
                 fill
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
