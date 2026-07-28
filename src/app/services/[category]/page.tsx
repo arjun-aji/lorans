@@ -6,6 +6,7 @@ import ServiceIcon from '@/components/ServiceIcon';
 import Header from '@/components/Header';
 import Contact from '@/components/Contact';
 import Preloader from '@/components/Preloader';
+import StructuredData from '@/components/StructuredData';
 import { getCategoryBySlug, SERVICE_CATEGORIES } from '@/data/servicesData';
 
 interface CategoryPageProps {
@@ -26,13 +27,37 @@ export async function generateMetadata({ params }: CategoryPageProps) {
 
   if (!category) {
     return {
-      title: 'Services | Loran\'s Gents Beauty Parlour & Make Up Studio',
+      title: "Services | Loran's Gents Beauty Parlour & Make Up Studio Ramalloor",
     };
   }
 
   return {
-    title: `${category.title} | Loran's Gents Beauty Parlour & Make Up Studio`,
-    description: category.detailDescription,
+    title: `${category.title} Services in Ramalloor | Loran's Gents Beauty & Make Up Studio`,
+    description: `${category.detailDescription} Premium ${category.title.toLowerCase()} in Ramalloor, Kolenchery, Ernakulam, Kerala at Loran's Salon.`,
+    keywords: [
+      category.title,
+      `${category.title} Ramalloor`,
+      `${category.title} Kolenchery`,
+      `${category.title} Ernakulam`,
+      "Loran's Gents Beauty & Make Up Studio",
+      "Men's Beauty Parlour Ramalloor",
+      "Best Beauty Parlour Ramalloor",
+      "Grooming Kerala"
+    ],
+    alternates: {
+      canonical: `/services/${category.slug}`,
+    },
+    openGraph: {
+      title: `${category.title} Services in Ramalloor | Loran's Gents Beauty & Make Up Studio`,
+      description: `${category.detailDescription} Premium ${category.title.toLowerCase()} in Ramalloor, Kolenchery, Ernakulam, Kerala at Loran's Salon.`,
+      url: `https://www.loransmakeupstudio.com/services/${category.slug}`,
+      images: [
+        {
+          url: category.image,
+          alt: `${category.title} at Loran's Gents Beauty & Make Up Studio Ramalloor`,
+        },
+      ],
+    },
   };
 }
 
@@ -44,10 +69,21 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
     notFound();
   }
 
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Services Catalog', url: '/services' },
+    { name: category.title, url: `/services/${category.slug}` }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF8F5] text-stone-900 font-sans">
       <Preloader />
       <Header />
+      <StructuredData
+        breadcrumbs={breadcrumbs}
+        serviceName={category.title}
+        serviceDescription={category.detailDescription}
+      />
 
       <main className="flex-grow pt-24 pb-20 px-4 sm:px-8 lg:px-16 max-w-7xl mx-auto w-full">
         {/* Top Back Navigation & Logo Header */}
@@ -72,7 +108,7 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
           <Link href="/" className="relative w-[180px] h-[48px] block select-none">
             <Image
               src="/assets/hero texxt.png"
-              alt="Loran's Gents Beauty Parlour & Make Up Studio"
+              alt="Loran's Gents Beauty Parlour & Make Up Studio Ramalloor"
               width={180}
               height={48}
               priority
@@ -83,7 +119,7 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
           <div className="hidden md:block w-32" aria-hidden="true" />
         </div>
 
-        {/* Hero Banner for Category Detail (Reference Image 2) */}
+        {/* Hero Banner for Category Detail */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white border border-[#ECE7DF] rounded-2xl p-6 sm:p-10 shadow-sm mb-12">
           {/* Left Text Block */}
           <div className="lg:col-span-8 flex flex-col items-start">
@@ -106,7 +142,7 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
           <div className="lg:col-span-4 relative h-64 sm:h-72 w-full rounded-xl overflow-hidden shadow-md border border-[#ECE7DF]">
             <Image
               src={category.image}
-              alt={category.title}
+              alt={`${category.title} services at Loran's Gents Beauty & Make Up Studio Ramalloor`}
               fill
               className="object-cover object-center transform hover:scale-105 transition-transform duration-700"
               sizes="(max-width: 1024px) 100vw, 33vw"
@@ -115,7 +151,7 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
           </div>
         </div>
 
-        {/* Elegant Service List Rows (Reference Image 2) */}
+        {/* Elegant Service List Rows */}
         <div className="bg-white border border-[#ECE7DF] rounded-2xl p-3 sm:p-6 shadow-sm">
           <div className="divide-y divide-[#ECE7DF]/70">
             {category.items.map((item, index) => (
@@ -133,9 +169,9 @@ export default async function CategoryDetailPage({ params }: CategoryPageProps) 
                   </div>
 
                   <div>
-                    <h3 className="font-sans font-bold text-sm sm:text-base tracking-wider text-[#1F1F1F] uppercase">
+                    <h2 className="font-sans font-bold text-sm sm:text-base tracking-wider text-[#1F1F1F] uppercase">
                       {item.name}
-                    </h3>
+                    </h2>
                     <p className="font-sans text-stone-500 font-light text-xs sm:text-sm leading-relaxed mt-1 max-w-2xl">
                       {item.description}
                     </p>

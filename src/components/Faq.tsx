@@ -7,26 +7,39 @@ export default function Faq() {
 
   const faqs = [
     {
-      question: "What are Loran's Gents Beauty Parlour working hours?",
-      answer: "We are open Monday through Saturday from 9:00 AM to 9:00 PM, and on Sundays from 9:00 AM to 8:00 PM.",
+      question: "Do you offer groom makeup services in Ernakulam?",
+      answer: "Yes, we specialize in modern Groom Makeup, HD Makeup, Glass Makeup, Waterproof Makeup, and wedding grooming packages for grooms across Ramalloor, Kothamangalam, and Ernakulam.",
     },
     {
-      question: "Do I need to book an appointment in advance?",
-      answer: "While we accept walk-in clients based on our barbers' availability, we highly recommend booking an appointment online in advance to secure your preferred time slot and avoid any waiting.",
+      question: "Do you provide ladies haircuts and hair styling?",
+      answer: "Yes, in addition to men's grooming, we offer expert ladies' haircuts including layer cuts, bob cuts, butterfly cuts, wolf cuts, and customized styling.",
     },
     {
-      question: "Where is the Gents Beauty Parlour located?",
-      answer: "Loran's Gents Beauty Parlour is located near Ramaloor St. Jude Chapel in Kothamangalam, Kerala (686691). You can view our location map and get directions in the contact section below.",
+      question: "What hair treatments and Keratin options are available at Loran's?",
+      answer: "We offer deep restorative Hair Spa, Keratin Treatments, Hair Botox, Hair Smoothening, Permanent Straightening, Scalp Detox, and grey coverage coloring using scalp-safe products.",
     },
     {
-      question: "Do you offer grooming services for children?",
-      answer: "Yes, we offer stylish and comfortable haircuts specifically tailored for kids in a friendly, patient, and welcoming environment.",
+      question: "Do you offer Hydra Facial and clinical facial treatments in Ramalloor?",
+      answer: "Yes, we feature over 100+ facial treatments including Hydra Facial, Korean Glass Skin Facial, Gold & Diamond Facials, De-Tan, and deep cleansing Clean Ups.",
     },
     {
-      question: "What grooming packages or combination services do you offer?",
-      answer: "We offer complete grooming combinations including haircuts, beard styling, hair spas, facials, and hair coloring. You can select and combine any services when booking your appointment.",
+      question: "What are Loran's salon timings and appointment booking methods?",
+      answer: "We are open Monday through Sunday from 8:00 AM to 8:30 PM. Walk-ins are welcome, but advance online or WhatsApp booking is recommended for seamless service.",
     },
   ];
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  };
 
   const toggleFaq = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -38,6 +51,10 @@ export default function Faq() {
       className="py-24 bg-white border-t border-stone-200/40 lg:min-h-screen lg:flex lg:items-center"
       aria-labelledby="faq-heading"
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="max-w-4xl mx-auto px-6 w-full">
 
         {/* Section Header */}
@@ -68,6 +85,7 @@ export default function Faq() {
                   className="flex justify-between items-center w-full text-left py-3 focus:outline-none group cursor-pointer"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
+                  id={`faq-question-${index}`}
                 >
                   <span className="font-sans font-semibold text-sm sm:text-base text-stone-850 group-hover:text-[#c59842] transition-colors duration-300">
                     {faq.question}
@@ -90,7 +108,7 @@ export default function Faq() {
                   id={`faq-answer-${index}`}
                   role="region"
                   aria-labelledby={`faq-question-${index}`}
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[150px] opacity-100 mt-2' : 'max-h-0 opacity-0'
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[200px] opacity-100 mt-2' : 'max-h-0 opacity-0'
                     }`}
                 >
                   <p className="font-sans text-stone-500 font-light text-xs sm:text-sm leading-relaxed max-w-3xl pb-2">

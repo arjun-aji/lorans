@@ -20,7 +20,7 @@ export default function Home() {
         <section
           id="hero"
           className="relative overflow-hidden bg-[#FAF8F5]"
-          aria-label="Welcome to Loran's Gents Beauty Parlour"
+          aria-label="Welcome to Loran's Gents Beauty Parlour & Make Up Studio Ramalloor"
         >
 
           {/* ════════════════════════════════════════════════════════════════
@@ -40,8 +40,11 @@ export default function Home() {
                   marginBottom: "20px",
                 }}
               >
-                Grooming for Men
+                Grooming for Men &amp; Women
               </span>
+
+              {/* Visually hidden H1 for SEO */}
+              <h1 className="sr-only">Loran&apos;s Gents Beauty Parlour &amp; Make Up Studio Ramalloor Ernakulam</h1>
 
               {/* Heading image (hero texxt.png) */}
               <div
@@ -54,7 +57,8 @@ export default function Home() {
               >
                 <Image
                   src="/assets/hero texxt.png"
-                  alt="Loran's Gents Beauty Parlour & Make Up Studio"
+                  alt="Loran's Gents Beauty Parlour & Make Up Studio Ramalloor"
+                  title="Loran's Gents Beauty Parlour & Make Up Studio"
                   width={320}
                   height={160}
                   priority
@@ -113,7 +117,7 @@ export default function Home() {
                   marginBottom: "36px",
                 }}
               >
-                Professional grooming tailored for modern gentlemen. Experience precision, comfort and timeless style.
+                Gents beauty parlour, haircuts, Keratin, and Hydra Facials in Ramalloor, Kothamangalam, Ernakulam.
               </p>
 
               {/* CTA */}
@@ -134,6 +138,7 @@ export default function Home() {
                   animation: "fade-in-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.64s forwards",
                   alignSelf: "flex-start",
                 }}
+                aria-label="Book appointment at Loran's Salon on WhatsApp"
               >
                 <span>Book Appointment</span>
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -150,14 +155,15 @@ export default function Home() {
               {/* Barber image */}
               <Image
                 src="/assets/hero.jpeg"
-                alt="Professional barber styling a gentleman's hair at Loran's"
+                alt="Professional barber styling hair at Loran's Gents Beauty Parlour Ramalloor"
+                title="Loran's Gents Beauty Parlour Ramalloor"
                 fill
                 priority
                 className="object-cover object-[60%_15%] animate-hero-zoom-in"
                 sizes="100vw"
                 style={{ filter: "contrast(1.06) saturate(1.1) sepia(0.05)" }}
               />
-              {/* Top-to-bottom gradient fade: white → transparent so image blends into bg */}
+              {/* Top-to-bottom gradient fade */}
               <div
                 className="absolute inset-0 pointer-events-none"
                 aria-hidden="true"
@@ -170,15 +176,16 @@ export default function Home() {
           </div>
 
           {/* ════════════════════════════════════════════════════════════════
-              DESKTOP HERO  (≥ md)  — original split layout, UNCHANGED
+              DESKTOP HERO  (≥ md)  — original split layout
           ════════════════════════════════════════════════════════════════ */}
           <div className="hidden md:block">
 
-            {/* ── Hero Image ── full bleed, zoom-in on load */}
+            {/* ── Hero Image ── full bleed */}
             <div className="absolute inset-0 z-0 select-none">
               <Image
                 src="/assets/hero.jpeg"
-                alt="Professional barber styling a gentleman's hair at Loran's Gents Beauty Parlour"
+                alt="Professional hair stylist at Loran's Gents Beauty Parlour & Make Up Studio Ramalloor Ernakulam"
+                title="Loran's Gents Beauty Parlour & Make Up Studio Ramalloor"
                 fill
                 priority
                 className="object-cover object-[72%_30%] animate-hero-zoom-in"
@@ -187,7 +194,7 @@ export default function Home() {
               />
             </div>
 
-            {/* ── Gradient overlay: opaque cream left → transparent right ── */}
+            {/* ── Gradient overlay ── */}
             <div
               className="absolute inset-0 z-10 pointer-events-none"
               aria-hidden="true"
@@ -209,11 +216,11 @@ export default function Home() {
                     animation: "fade-in-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s forwards",
                   }}
                 >
-                  Grooming for Men
+                  Grooming for Men &amp; Women
                 </span>
 
                 {/* Visually hidden h1 for SEO & accessibility */}
-                <h1 className="sr-only">Loran&apos;s Gents Beauty Parlour &amp; Make Up Studio</h1>
+                <h1 className="sr-only">Loran&apos;s Gents Beauty Parlour &amp; Make Up Studio - Best Salon in Ramalloor, Ernakulam</h1>
 
                 {/* Main heading image */}
                 <div
@@ -222,7 +229,8 @@ export default function Home() {
                 >
                   <Image
                     src="/assets/hero texxt.png"
-                    alt="Loran's Gents Beauty Parlour & Make Up Studio"
+                    alt="Loran's Gents Beauty Parlour & Make Up Studio Ramalloor Ernakulam"
+                    title="Loran's Gents Beauty Parlour & Make Up Studio Ramalloor"
                     width={480}
                     height={240}
                     priority
@@ -265,9 +273,7 @@ export default function Home() {
                   className="font-sans text-stone-600 text-lg leading-8 max-w-[500px] opacity-0 mb-10"
                   style={{ animation: "fade-in-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.60s forwards" }}
                 >
-                  Professional grooming services tailored for the modern gentleman.
-                  Experience precision, comfort, and timeless style in an atmosphere
-                  designed around confidence.
+                  Gents beauty parlour, haircuts, Keratin treatments, Hydra Facials, and groom makeup studio in Ramalloor, Kothamangalam, Ernakulam.
                 </p>
 
                 {/* CTA */}
@@ -286,6 +292,7 @@ export default function Home() {
                     boxShadow: "0 4px 20px rgba(197,152,66,0.28)",
                     animation: "fade-in-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.72s forwards",
                   }}
+                  aria-label="Book appointment at Loran's Salon on WhatsApp"
                 >
                   <span>Book Appointment</span>
                   <svg
@@ -316,8 +323,6 @@ export default function Home() {
           </div>
 
         </section>
-
-
 
         {/* Services Section */}
         <Services />

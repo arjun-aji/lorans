@@ -20,7 +20,7 @@ export default function Header() {
           onClick={toggleMenu}
           className="flex flex-col justify-center items-center w-11 h-11 space-y-[5px] focus:outline-none relative z-50 flex-shrink-0 cursor-pointer"
           aria-expanded={isOpen}
-          aria-label="Toggle Menu"
+          aria-label="Toggle Navigation Menu"
         >
           <span
             className={`block w-[22px] h-[1.5px] bg-stone-950 transition-all duration-300 origin-center ${
@@ -43,15 +43,17 @@ export default function Header() {
         <Link
           href="/"
           className="focus-visible:outline-none block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50"
-          aria-label="Loran's Home"
+          aria-label="Loran's Gents Beauty Parlour & Make Up Studio Homepage"
         >
           <div className="relative w-[120px] sm:w-[160px] h-[36px] sm:h-[42px]">
             <Image
               src="/assets/logo.png"
-              alt="Loran's"
+              alt="Loran's Gents Beauty Parlour & Make Up Studio Logo Ramalloor"
+              title="Loran's Gents Beauty & Make Up Studio"
               fill
               sizes="160px"
               className="object-contain"
+              priority
             />
           </div>
         </Link>
@@ -64,6 +66,7 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center px-2.5 sm:px-3 py-2 bg-[#c59842] hover:bg-[#b58832] text-[9px] sm:text-[10px] font-bold tracking-[0.12em] uppercase text-white transition-all duration-300 rounded shadow-sm relative z-50 flex-shrink-0"
+          aria-label="Book appointment on WhatsApp"
         >
           Book Appointment
         </a>
@@ -72,7 +75,7 @@ export default function Header() {
       {/* ─── DESKTOP NAVBAR (≥ md) ───────────────────────────────────────────── */}
       <nav
         className="hidden md:flex w-full h-20 items-center"
-        aria-label="Main Navigation"
+        aria-label="Main Navigation Menu"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full flex items-center justify-between">
 
@@ -81,15 +84,17 @@ export default function Header() {
             <Link
               href="/"
               className="focus-visible:outline-none block"
-              aria-label="Loran's Home"
+              aria-label="Loran's Gents Beauty Parlour & Make Up Studio Homepage"
             >
               <div className="relative w-[160px] h-[42px]">
                 <Image
                   src="/assets/logo.png"
-                  alt="Loran's"
+                  alt="Loran's Gents Beauty Parlour & Make Up Studio Logo Ramalloor"
+                  title="Loran's Gents Beauty & Make Up Studio Ramalloor"
                   fill
                   sizes="160px"
                   className="object-contain"
+                  priority
                 />
               </div>
             </Link>
@@ -113,6 +118,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-[#c59842] hover:bg-[#b58832] text-[10px] font-bold tracking-[0.2em] uppercase text-white transition-all duration-300 shadow-md shadow-gold-500/10"
+              aria-label="Book appointment on WhatsApp"
             >
               Book Appointment
             </a>

@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter, Pinyon_Script } from "next/font/google";
 import "./globals.css";
+import QueryProvider from "@/providers/QueryProvider";
+import StructuredData from "@/components/StructuredData";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -24,21 +26,57 @@ const pinyon = Pinyon_Script({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#FAF8F5",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Loran's Hair Cutting Saloon",
-    default: "Loran's Hair Cutting Saloon | Premium Grooming & Hair Care",
-  },
-  description: "Experience premium grooming for men at Loran's Hair Cutting Saloon. Tailored hair cuts, styling, and modern shaving services designed for the modern gentleman.",
   metadataBase: new URL("https://www.loransmakeupstudio.com"),
+  title: {
+    template: "%s | Loran's Gents Beauty & Make Up Studio Ramalloor",
+    default: "Loran's Gents Beauty & Make Up Studio | Best Salon in Ramalloor, Ernakulam",
+  },
+  description: "Gents beauty parlour, ladies haircutting, hair treatments, keratin, hair spa, hydra facials & groom makeup studio in Ramalloor, Kothamangalam, Ernakulam, Kerala.",
+  keywords: [
+    "Loran's Gents Beauty & Make Up Studio",
+    "Men's Beauty Parlour Ramalloor",
+    "Best Beauty Parlour Ramalloor",
+    "Best Men's Salon Ramalloor",
+    "Hair Cutting Ramalloor",
+    "Beauty Parlour Kothamangalam",
+    "Hair Treatment Ramalloor",
+    "Hair Spa Ramalloor",
+    "Facial Treatment Ramalloor",
+    "Wedding Grooming Ramalloor",
+    "Groom Makeup Ramalloor",
+    "Beauty Parlour Kolenchery",
+    "Hair Salon Ernakulam",
+    "Hair Salon Kochi",
+    "Groom Makeup Ernakulam",
+    "Premium Grooming Kerala",
+    "Hydra Facial Ramalloor",
+    "Keratin Treatment Kolenchery"
+  ],
+  authors: [{ name: "Loran's Team", url: "https://www.loransmakeupstudio.com" }],
+  creator: "Loran's Gents Beauty & Make Up Studio",
+  publisher: "Loran's Gents Beauty & Make Up Studio",
+  category: "Beauty & Grooming Salon",
   alternates: {
     canonical: "/",
   },
+  other: {
+    "geo.region": "IN-KL",
+    "geo.placename": "Ramalloor, Ernakulam, Kerala, India",
+    "geo.position": "9.9796;76.4717",
+    "ICBM": "9.9796, 76.4717",
+  },
   openGraph: {
-    title: "Loran's Hair Cutting Saloon | Premium Grooming & Hair Care",
-    description: "Experience premium grooming for men at Loran's Hair Cutting Saloon. Tailored hair cuts, styling, and modern shaving services designed for the modern gentleman.",
+    title: "Loran's Gents Beauty & Make Up Studio | Best Salon in Ramalloor, Ernakulam",
+    description: "Gents beauty parlour, ladies haircutting, hair treatments, keratin, hydra facials, and groom makeup studio in Ramalloor, Kothamangalam, Ernakulam.",
     url: "https://www.loransmakeupstudio.com",
-    siteName: "Loran's Hair Cutting Saloon",
+    siteName: "Loran's Gents Beauty & Make Up Studio",
     locale: "en_US",
     type: "website",
     images: [
@@ -46,14 +84,14 @@ export const metadata: Metadata = {
         url: "/assets/hero.jpeg",
         width: 1200,
         height: 630,
-        alt: "Loran's Hair Cutting Saloon",
+        alt: "Loran's Gents Beauty & Make Up Studio in Ramalloor, Ernakulam",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Loran's Hair Cutting Saloon | Premium Grooming & Hair Care",
-    description: "Experience premium grooming for men at Loran's Hair Cutting Saloon. Tailored hair cuts, styling, and modern shaving services designed for the modern gentleman.",
+    title: "Loran's Gents Beauty & Make Up Studio | Best Salon in Ramalloor, Ernakulam",
+    description: "Gents beauty parlour, hair treatments, keratin, hydra facials, and groom makeup in Ramalloor, Kothamangalam, Ernakulam.",
     images: ["/assets/hero.jpeg"],
   },
   robots: {
@@ -68,12 +106,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/assets/lorans_logo_gold.png",
-    apple: "/assets/lorans_logo_gold.png",
+    icon: "/assets/logo.png",
+    apple: "/assets/logo.png",
+    shortcut: "/assets/logo.png",
   },
 };
-
-import QueryProvider from "@/providers/QueryProvider";
 
 export default function RootLayout({
   children,
@@ -85,6 +122,9 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${inter.variable} ${pinyon.variable} h-full antialiasedScroll`}
     >
+      <head>
+        <StructuredData />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-stone-50 text-stone-900 selection:bg-amber-100 selection:text-amber-900">
         <QueryProvider>{children}</QueryProvider>
       </body>
