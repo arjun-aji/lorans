@@ -20,31 +20,6 @@ const containerVariants: Variants = {
   },
 };
 
-// Helper for desktop aspect ratios
-const getDesktopAspectClass = (item: GalleryItem, index: number): string => {
-  if (item.media_type === 'video') {
-    return index % 2 === 0 ? 'aspect-[9/16]' : 'aspect-[16/9]';
-  }
-  const formats = ['aspect-[4/3]', 'aspect-[3/4]', 'aspect-[16/9]', 'aspect-square', 'aspect-[3/4]'];
-  return formats[index % formats.length];
-};
-
-// Helper for mobile 2-column Pinterest aspect ratios (Small, Medium, Tall, Landscape, Portrait)
-const getMobileAspectClass = (item: GalleryItem, index: number): string => {
-  if (item.media_type === 'video') {
-    return index % 2 === 0 ? 'aspect-[9/16]' : 'aspect-[4/3]';
-  }
-  const mobileFormats = [
-    'aspect-[3/4]',   // Tall portrait
-    'aspect-[4/3]',   // Medium landscape
-    'aspect-square',  // Small square
-    'aspect-[9/16]',  // Extra tall reel
-    'aspect-[16/9]',  // Wide landscape
-    'aspect-[3/4]',   // Tall portrait
-  ];
-  return mobileFormats[index % mobileFormats.length];
-};
-
 export default function GalleryGrid({ items, onItemClick }: GalleryGridProps) {
   // Mobile 2 Columns Distribution
   const { mobCol1, mobCol2 } = useMemo(() => {
@@ -81,76 +56,71 @@ export default function GalleryGrid({ items, onItemClick }: GalleryGridProps) {
       animate="show"
       className="w-full"
     >
-      {/* ── MOBILE 2-COLUMN MASONRY (< sm) ────────────────────────────────── */}
-      <div className="grid grid-cols-2 gap-2.5 sm:hidden">
-        {/* Mobile Column 1 */}
-        <div className="flex flex-col gap-2.5">
+      {/* ── MOBILE 2-COLUMN DYNAMIC MASONRY (< sm) ────────────────────────── */}
+      <div className="grid grid-cols-2 gap-3 sm:hidden">
+        {/* Column 1 */}
+        <div className="flex flex-col gap-3">
           {mobCol1.map(({ item, globalIdx }) => (
             <GalleryCard
               key={item._id}
               item={item}
               index={globalIdx}
               priority={globalIdx === 0}
-              aspectClass={getMobileAspectClass(item, globalIdx)}
               onClick={() => onItemClick(item, globalIdx)}
             />
           ))}
         </div>
 
-        {/* Mobile Column 2 */}
-        <div className="flex flex-col gap-2.5">
+        {/* Column 2 */}
+        <div className="flex flex-col gap-3">
           {mobCol2.map(({ item, globalIdx }) => (
             <GalleryCard
               key={item._id}
               item={item}
               index={globalIdx}
               priority={globalIdx === 0}
-              aspectClass={getMobileAspectClass(item, globalIdx)}
               onClick={() => onItemClick(item, globalIdx)}
             />
           ))}
         </div>
       </div>
 
-      {/* ── DESKTOP 3-COLUMN MASONRY (>= sm) — UNCHANGED ─────────────────── */}
-      <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        {/* Desktop Column 1 */}
-        <div className="flex flex-col gap-4 sm:gap-6">
+      {/* ── DESKTOP 3-COLUMN DYNAMIC MASONRY (>= sm) ────────────────────── */}
+      <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        {/* Column 1 */}
+        <div className="flex flex-col gap-5 lg:gap-6">
           {deskCol1.map(({ item, globalIdx }) => (
             <GalleryCard
               key={item._id}
               item={item}
               index={globalIdx}
               priority={globalIdx === 0}
-              aspectClass={getDesktopAspectClass(item, globalIdx)}
               onClick={() => onItemClick(item, globalIdx)}
             />
           ))}
         </div>
 
-        {/* Desktop Column 2 */}
-        <div className="flex flex-col gap-4 sm:gap-6">
+        {/* Column 2 */}
+        <div className="flex flex-col gap-5 lg:gap-6">
           {deskCol2.map(({ item, globalIdx }) => (
             <GalleryCard
               key={item._id}
               item={item}
               index={globalIdx}
               priority={globalIdx === 0}
-              aspectClass={getDesktopAspectClass(item, globalIdx)}
               onClick={() => onItemClick(item, globalIdx)}
             />
           ))}
         </div>
 
-        {/* Desktop Column 3 */}
-        <div className="hidden lg:flex flex-col gap-4 sm:gap-6">
+        {/* Column 3 */}
+        <div className="hidden lg:flex flex-col gap-5 lg:gap-6">
           {deskCol3.map(({ item, globalIdx }) => (
             <GalleryCard
               key={item._id}
               item={item}
               index={globalIdx}
               priority={globalIdx === 0}
-              aspectClass={getDesktopAspectClass(item, globalIdx)}
               onClick={() => onItemClick(item, globalIdx)}
             />
           ))}

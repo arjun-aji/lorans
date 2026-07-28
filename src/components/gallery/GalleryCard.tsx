@@ -15,7 +15,7 @@ interface GalleryCardProps {
 }
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 24, scale: 0.96 },
+  hidden: { opacity: 0, y: 20, scale: 0.97 },
   show: {
     opacity: 1,
     y: 0,
@@ -32,7 +32,6 @@ export default function GalleryCard({
   item,
   index,
   priority = false,
-  aspectClass = 'aspect-[4/3]',
   onClick,
 }: GalleryCardProps) {
   return (
@@ -42,9 +41,9 @@ export default function GalleryCard({
       layout
     >
       {item.media_type === 'video' ? (
-        <VideoCard item={item} index={index} aspectClass={aspectClass} onClick={onClick} />
+        <VideoCard item={item} index={index} onClick={onClick} />
       ) : (
-        <ImageCard item={item} index={index} priority={priority} aspectClass={aspectClass} onClick={onClick} />
+        <ImageCard item={item} index={index} priority={priority} onClick={onClick} />
       )}
     </motion.div>
   );

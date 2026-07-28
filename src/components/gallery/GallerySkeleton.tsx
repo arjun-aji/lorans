@@ -17,7 +17,7 @@ export default function GallerySkeleton({ count = 6 }: GallerySkeletonProps) {
   ];
 
   return (
-    <div 
+    <div
       className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6"
       aria-label="Loading gallery media"
     >
