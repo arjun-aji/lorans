@@ -117,7 +117,7 @@ export default function Home() {
                   marginBottom: "36px",
                 }}
               >
-                Gents beauty parlour, haircuts, Keratin, and Hydra Facials in Ramalloor, Kothamangalam, Ernakulam.
+                Gents beauty parlour in Ramalloor, Kothamangalam, Ernakulam offering haircuts, beard styling, hair spa, keratin treatments, Hydra Facials, wedding grooming, and groom makeup.
               </p>
 
               {/* CTA */}
@@ -273,7 +273,7 @@ export default function Home() {
                   className="font-sans text-stone-600 text-lg leading-8 max-w-[500px] opacity-0 mb-10"
                   style={{ animation: "fade-in-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.60s forwards" }}
                 >
-                  Gents beauty parlour, haircuts, Keratin treatments, Hydra Facials, and groom makeup studio in Ramalloor, Kothamangalam, Ernakulam.
+                  Gents beauty parlour in Ramalloor, Kothamangalam, Ernakulam offering haircuts, beard styling, hair spa, keratin treatments, Hydra Facials, wedding grooming, and groom makeup.
                 </p>
 
                 {/* CTA */}

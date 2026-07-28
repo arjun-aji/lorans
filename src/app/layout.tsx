@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: "%s | Loran's Gents Beauty & Make Up Studio Ramalloor",
     default: "Loran's Gents Beauty & Make Up Studio | Best Salon in Ramalloor, Ernakulam",
   },
-  description: "Gents beauty parlour, ladies haircutting, hair treatments, keratin, hair spa, hydra facials & groom makeup studio in Ramalloor, Kothamangalam, Ernakulam, Kerala.",
+  description: "Gents beauty parlour in Ramalloor, Kothamangalam, Ernakulam offering haircuts, beard styling, hair spa, keratin treatments, Hydra Facials, wedding grooming, and groom makeup.",
   keywords: [
     "Loran's Gents Beauty & Make Up Studio",
     "Men's Beauty Parlour Ramalloor",

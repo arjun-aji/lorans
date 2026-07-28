@@ -24,7 +24,7 @@ export default function Faq() {
     },
     {
       question: "What are Loran's salon timings and appointment booking methods?",
-      answer: "We are open Monday through Sunday from 8:00 AM to 8:30 PM. Walk-ins are welcome, but advance online or WhatsApp booking is recommended for seamless service.",
+      answer: "We are open Monday through Saturday from 9:00 AM to 9:00 PM, and on Sundays from 9:00 AM to 8:00 PM. Walk-ins are welcome, but advance online or WhatsApp booking is recommended for seamless service.",
     },
   ];
 
