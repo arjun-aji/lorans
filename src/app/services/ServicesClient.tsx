@@ -39,9 +39,9 @@ export default function ServicesClient() {
             <span>Back to Home</span>
           </Link>
 
-          <h1 className="font-serif text-[22px] font-semibold text-[#1F1F1F] tracking-tight leading-tight">
+          <h2 className="font-serif text-[22px] font-semibold text-[#1F1F1F] tracking-tight leading-tight">
             Services Catalog - Loran&apos;s Ramalloor
-          </h1>
+          </h2>
 
           <p className="font-sans text-[13px] text-stone-600 font-light truncate max-w-xs mt-0.5">
             Explore our curated grooming, haircuts, and beauty directory.

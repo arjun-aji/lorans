@@ -16,6 +16,9 @@ export default function Home() {
 
       {/* Main Content Area */}
       <main className="flex-grow">
+        {/* Primary H1 for SEO & accessibility aligned with Page Title */}
+        <h1 className="sr-only">Loran&apos;s Gents Beauty &amp; Make Up Studio | Ramalloor</h1>
+
         {/* ── HERO SECTION ──────────────────────────────────────────────── */}
         <section
           id="hero"
@@ -42,9 +45,6 @@ export default function Home() {
               >
                 Grooming for Men &amp; Women
               </span>
-
-              {/* Visually hidden H1 for SEO */}
-              <h1 className="sr-only">Loran&apos;s Gents Beauty Parlour &amp; Make Up Studio Ramalloor Ernakulam</h1>
 
               {/* Heading image (hero texxt.png) */}
               <div
@@ -218,9 +218,6 @@ export default function Home() {
                 >
                   Grooming for Men &amp; Women
                 </span>
-
-                {/* Visually hidden h1 for SEO & accessibility */}
-                <h1 className="sr-only">Loran&apos;s Gents Beauty Parlour &amp; Make Up Studio - Best Salon in Ramalloor, Ernakulam</h1>
 
                 {/* Main heading image */}
                 <div

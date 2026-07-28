@@ -44,6 +44,7 @@ export default function Services() {
             <Link
               key={category.id}
               href={`/services/${category.slug}`}
+              aria-label={`Explore ${category.title} services at Loran's`}
               className="bg-white border border-[#ECE7DF] rounded-2xl p-3.5 sm:p-6 lg:p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
             >
               <div>
@@ -84,7 +85,7 @@ export default function Services() {
                   {category.totalServices}
                 </span>
                 <span className="font-sans text-[10px] sm:text-xs tracking-wider font-semibold uppercase text-[#C59842] group-hover:text-[#B58832] inline-flex items-center gap-1 sm:gap-1.5 transition-colors">
-                  <span>Explore</span>
+                  <span>Explore {category.shortTitle}</span>
                   <svg
                     className="w-3 h-3 sm:w-3.5 sm:h-3.5 transform group-hover:translate-x-1 transition-transform duration-300"
                     fill="none"

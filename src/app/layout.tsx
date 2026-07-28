@@ -35,10 +35,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.loransmakeupstudio.com"),
   title: {
-    template: "%s | Loran's Gents Beauty & Make Up Studio Ramalloor",
-    default: "Loran's Gents Beauty & Make Up Studio | Best Salon in Ramalloor, Ernakulam",
+    template: "%s | Loran's Studio Ramalloor",
+    default: "Loran's Gents Beauty & Make Up Studio | Ramalloor",
   },
-  description: "Gents beauty parlour in Ramalloor, Kothamangalam, Ernakulam offering haircuts, beard styling, hair spa, keratin treatments, Hydra Facials, wedding grooming, and groom makeup.",
+  description: "Gents beauty parlour in Ramalloor, Ernakulam offering haircuts, beard styling, hair spa, keratin treatments, Hydra Facials & groom makeup at Loran's Studio.",
   keywords: [
     "Loran's Gents Beauty & Make Up Studio",
     "Men's Beauty Parlour Ramalloor",
@@ -73,8 +73,8 @@ export const metadata: Metadata = {
     "ICBM": "9.9796, 76.4717",
   },
   openGraph: {
-    title: "Loran's Gents Beauty & Make Up Studio | Best Salon in Ramalloor, Ernakulam",
-    description: "Gents beauty parlour, ladies haircutting, hair treatments, keratin, hydra facials, and groom makeup studio in Ramalloor, Kothamangalam, Ernakulam.",
+    title: "Loran's Gents Beauty & Make Up Studio | Ramalloor",
+    description: "Gents beauty parlour in Ramalloor, Ernakulam offering haircuts, beard styling, hair spa, keratin treatments, Hydra Facials & groom makeup at Loran's Studio.",
     url: "https://www.loransmakeupstudio.com",
     siteName: "Loran's Gents Beauty & Make Up Studio",
     locale: "en_US",
@@ -90,8 +90,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Loran's Gents Beauty & Make Up Studio | Best Salon in Ramalloor, Ernakulam",
-    description: "Gents beauty parlour, hair treatments, keratin, hydra facials, and groom makeup in Ramalloor, Kothamangalam, Ernakulam.",
+    title: "Loran's Gents Beauty & Make Up Studio | Ramalloor",
+    description: "Gents beauty parlour in Ramalloor, Ernakulam offering haircuts, beard styling, hair spa, keratin treatments, Hydra Facials & groom makeup at Loran's Studio.",
     images: ["/assets/hero.jpeg"],
   },
   robots: {
