@@ -43,7 +43,7 @@ export default function Home() {
                   marginBottom: "20px",
                 }}
               >
-                Grooming for Men &amp; Women
+                Grooming for Men
               </span>
 
               {/* Heading image (hero texxt.png) */}
@@ -216,7 +216,7 @@ export default function Home() {
                     animation: "fade-in-up 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s forwards",
                   }}
                 >
-                  Grooming for Men &amp; Women
+                  Grooming for Men
                 </span>
 
                 {/* Main heading image */}
