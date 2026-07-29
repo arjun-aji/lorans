@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Contact() {
   const scrollToTop = () => {
@@ -219,7 +220,7 @@ export default function Contact() {
       </section>
 
       {/* Premium Multi-Column Footer */}
-      <footer className="bg-[#F4F1EA] text-stone-600 py-16 border-t border-stone-200 relative z-20">
+      <footer className="bg-[#F4F1EA] text-stone-600 py-12 sm:py-16 pb-28 md:pb-16 border-t border-stone-200 relative z-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 pb-12 border-b border-stone-200">
@@ -244,17 +245,33 @@ export default function Contact() {
             </div>
 
             {/* Quick links columns */}
-            <div className="md:col-span-4 grid grid-cols-2 gap-6">
-              <div className="flex flex-col gap-3">
-                <span className="text-[10px] tracking-widest font-bold text-stone-950 uppercase mb-1">Quick Links</span>
-                <a href="#" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">Home</a>
-                <a href="#about" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">About</a>
-                <a href="#services" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">Services</a>
-              </div>
-              <div className="flex flex-col gap-3 mt-6">
-                <a href="#gallery" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">Gallery</a>
-                <a href="#faq" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">FAQ</a>
-                <a href="#contact" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">Contact</a>
+            <div className="md:col-span-4 flex flex-col gap-3">
+              <span className="text-[10px] tracking-widest font-bold text-stone-950 uppercase mb-1">
+                Quick Links
+              </span>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex flex-col gap-3">
+                  <Link href="/" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">
+                    Home
+                  </Link>
+                  <Link href="/#about" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">
+                    About
+                  </Link>
+                  <Link href="/#services" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">
+                    Services
+                  </Link>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Link href="/#gallery" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">
+                    Gallery
+                  </Link>
+                  <Link href="/#faq" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">
+                    FAQ
+                  </Link>
+                  <Link href="/#contact" className="text-xs hover:text-[#c59842] transition-colors focus-visible:outline-none">
+                    Contact
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -321,7 +338,7 @@ export default function Contact() {
           </div>
 
           {/* Copyright Bottom Bar */}
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-stone-500 text-[10px] tracking-widest font-semibold uppercase">
+          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-stone-500 text-[10px] tracking-widest font-semibold uppercase text-center sm:text-left">
             <span>© {new Date().getFullYear()} Loran&apos;s Gents Beauty Parlour & Make Up Studio. All Rights Reserved.</span>
             <span>Where Style Meets Precision</span>
           </div>
