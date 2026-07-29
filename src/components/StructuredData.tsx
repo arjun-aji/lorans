@@ -89,7 +89,7 @@ export default function StructuredData({
     ],
     sameAs: [
       'https://www.instagram.com/loransmakeupstudio',
-      'https://www.facebook.com/loransmakeupstudio',
+      'https://www.facebook.com/profile.php?id=61552947870423&mibextid=ZbWKwL',
       'https://www.youtube.com/@loransmakeupstudio'
     ],
     contactPoint: {

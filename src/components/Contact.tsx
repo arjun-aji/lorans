@@ -298,7 +298,7 @@ export default function Contact() {
 
                   {/* Facebook */}
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/profile.php?id=61552947870423&mibextid=ZbWKwL"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border border-[#c59842]/40 text-[#c59842] hover:bg-[#c59842] hover:text-white transition-colors w-9 h-9 rounded-full flex items-center justify-center focus-visible:outline-none"
