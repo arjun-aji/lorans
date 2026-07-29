@@ -82,8 +82,9 @@ export default function Contact() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.625c0-1.25.75-2.375 1.875-2.875l2.25-1c.875-.375 1.875.125 2.25 1l1.125 2.625c.375.875-.125 1.875-1 2.25l-1.5.625c1.25 2.5 3.25 4.5 5.75 5.75l.625-1.5c.375-.875 1.375-1.375 2.25-1l2.625 1.125c.875.375 1.375 1.375 1 2.25l-1 2.25c-.5 1.125-1.625 1.875-2.875 1.875-6.625 0-12-5.375-12-12z" />
                       </svg>
                     </span>
-                    <div className="flex flex-col">
-                      <a href="tel:+919446869346" className="hover:text-[#c59842] transition-colors focus-visible:outline-none">+91 94468 69346<br></br>+91 89215 23412</a>
+                    <div className="flex flex-col gap-1">
+                      <a href="tel:+919446869346" className="hover:text-[#c59842] transition-colors focus-visible:outline-none">+91 94468 69346</a>
+                      <a href="tel:+918921523412" className="hover:text-[#c59842] transition-colors focus-visible:outline-none">+91 89215 23412</a>
                     </div>
                   </div>
 

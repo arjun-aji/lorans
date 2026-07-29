@@ -43,8 +43,8 @@ export default function StructuredData({
       `${baseUrl}/assets/grooming.png`
     ],
     description: "Gents beauty parlour, ladies haircuts, hair treatments, hydra facials, keratin, hair spa, and groom makeup studio in Ramalloor, Kothamangalam, Ernakulam, Kerala.",
-    telephone: "+91 00000 00000",
-    email: "info@loransmakeupstudio.com",
+    telephone: ["+91 94468 69346", "+91 89215 23412"],
+    email: "lawrenceminu@gmail.com",
     priceRange: "$$",
     paymentAccepted: ["Cash", "UPI", "Credit Card", "Debit Card"],
     currenciesAccepted: "INR",
@@ -94,7 +94,7 @@ export default function StructuredData({
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+91 00000 00000',
+      telephone: '+91 94468 69346',
       contactType: 'customer service',
       areaServed: 'IN',
       availableLanguage: ['en', 'ml']
