@@ -7,6 +7,10 @@ export default function Faq() {
 
   const faqs = [
     {
+      question: "Which is the best makeup studio in Kothamangalam?",
+      answer: "Loran's Gents Beauty Parlour & Make Up Studio is renowned as the best makeup studio in Kothamangalam, offering professional groom makeup, HD makeup, skin treatments, and expert styling services.",
+    },
+    {
       question: "Do you offer groom makeup services in Ernakulam?",
       answer: "Yes, we specialize in modern Groom Makeup, HD Makeup, Glass Makeup, Waterproof Makeup, and wedding grooming packages for grooms across Ramalloor, Kothamangalam, and Ernakulam.",
     },

@@ -83,7 +83,7 @@ export default function Contact() {
                       </svg>
                     </span>
                     <div className="flex flex-col">
-                      <a href="tel:+919446869346" className="hover:text-[#c59842] transition-colors focus-visible:outline-none">+91 94468 69346</a>
+                      <a href="tel:+919446869346" className="hover:text-[#c59842] transition-colors focus-visible:outline-none">+91 94468 69346<br></br>+91 89215 23412</a>
                     </div>
                   </div>
 
@@ -95,7 +95,7 @@ export default function Contact() {
                       </svg>
                     </span>
                     <a href="mailto:loransparlour@gmail.com" className="hover:text-[#c59842] transition-colors focus-visible:outline-none">
-                      loransparlour@gmail.com
+                      lawrenceminu@gmail.com
                     </a>
                   </div>
 

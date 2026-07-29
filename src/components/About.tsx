@@ -14,7 +14,7 @@ export default function About() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M5.5 6c-1 0-1.5.5-1.5 1.5v2c0 1 .5 1.5 1.5 1.5h1M18.5 6c1 0 1.5.5 1.5 1.5v2c0 1-.5 1.5-1.5 1.5h-1" />
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 22h6M12 18v4" />
         </svg>
-        <span className="font-sans font-bold text-lg sm:text-2xl text-stone-900">20+</span>
+        <span className="font-sans font-bold text-lg sm:text-2xl text-stone-900">26+</span>
         <span className="font-sans text-[7.5px] sm:text-[9px] tracking-widest text-stone-500 font-semibold text-center mt-1.5 uppercase leading-snug">
           Years of<br />Experience
         </span>
